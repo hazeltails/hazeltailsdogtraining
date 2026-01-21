@@ -11,141 +11,130 @@
       font-family: Arial, Helvetica, sans-serif;
       background-color: #fafcf9;
       color: #2f2f2f;
+      line-height: 1.6;
     }
 
-    header { margin-top: 80px; }
-
-    .banner {
-      text-align: center;
-      padding: 30px 20px;
-      background: #fff;
-    }
-
-    .banner img {
-      max-width: 100%;
-      height: auto;
-    }
-
+    /* NAVIGATION BAR */
     .nav-bar {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 20px;
+      justify-content: center;
+      gap: 30px;
       padding: 12px 20px;
       background: #f5f8f4;
       border-bottom: 1px solid #dde5dd;
     }
 
-    .nav-bar img { height: 42px; }
+    .nav-logo {
+      height: 42px;
+    }
 
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a,
+    .dropbtn {
+      font-size: 16px;
       font-weight: 600;
+      color: #2f2f2f;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav a:hover,
+    .dropbtn:hover {
+      color: #4b7b55;
+    }
+
+    /* DROPDOWNS */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color: #ffffff;
+      min-width: 200px;
+      border-radius: 6px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      z-index: 1001;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
       color: #2f2f2f;
     }
 
-    nav a:hover { color: #4b7b55; }
-
-    section {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
+    .dropdown-content a:hover {
+      background-color: #f0f4ef;
+      color: #4b7b55;
     }
 
-    footer {
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* PAGE CONTENT */
+    .page-content {
+      margin-top: 130px;
+      padding: 20px;
       text-align: center;
+    }
+
+    .banner-logo {
+      max-width: 90%;
+      height: auto;
+      margin: 30px auto;
+    }
+
+    h1 {
+      color: #4b7b55;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 18px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 80px;
       padding: 40px 20px;
       background: #eef2ed;
+      text-align: center;
     }
 
-    footer img { height: 50px; margin-bottom: 10px; }
-
-    .nav-bar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  padding: 12px 20px;
-  background: #f5f8f4;
-  border-bottom: 1px solid #dde5dd;
-}
-
-.nav-logo {
-  height: 42px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-nav a,
-.dropbtn {
-  text-decoration: none;
-  font-weight: 600;
-  color: #2f2f2f;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-nav a:hover,
-.dropbtn:hover {
-  color: #4b7b55;
-}
-
-/* Dropdown container */
-.dropdown {
-  position: relative;
-}
-
-/* Dropdown menu */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 200px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-  border-radius: 6px;
-  top: 30px;
-  left: 0;
-  z-index: 1001;
-}
-
-/* Dropdown links */
-.dropdown-content a {
-  display: block;
-  padding: 12px 16px;
-  color: #2f2f2f;
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  background-color: #f0f4ef;
-  color: #4b7b55;
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
+    footer img {
+      height: 55px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 <div class="nav-bar">
   <img
     src="https://1drv.ms/i/c/24eb8b14a4d2e6d1/IQTpIrVz66pqR6yA8FdMinY6Af3TOOfOok4n2flls-Xcq0M?width=367&height=373"
@@ -154,6 +143,7 @@ nav a:hover,
   >
 
   <nav>
+    <a href="index.html">Home</a>
     <a href="about.html">About</a>
 
     <div class="dropdown">
@@ -165,6 +155,8 @@ nav a:hover,
       </div>
     </div>
 
+    <a href="reviews.html">Reviews</a>
+
     <div class="dropdown">
       <button class="dropbtn">Contact Ella ▾</button>
       <div class="dropdown-content">
@@ -174,24 +166,39 @@ nav a:hover,
   </nav>
 </div>
 
+<!-- MAIN CONTENT -->
+<div class="page-content">
 
-<header>
-  <div class="banner">
-    <img src="https://1drv.ms/i/c/24eb8b14a4d2e6d1/IQTmEsuFzF7rQbkBd16gFLd5ASIFkU5StMxX0rsGOXKXwNE?width=1046&height=334">
-  </div>
-</header>
+  <img
+    src="https://1drv.ms/i/c/24eb8b14a4d2e6d1/IQTmEsuFzF7rQbkBd16gFLd5ASIFkU5StMxX0rsGOXKXwNE?width=1046&height=334"
+    alt="Hazel Tails Dog Training"
+    class="banner-logo"
+  >
 
-<section>
-  <h2>Positive training for confident dogs</h2>
-  <p>
-    Welcome to Hazel Tails Dog Training — kind, effective, reward-based training
-    that helps dogs and humans thrive together.</p>
-  <p>Full site coming soon!</p>
+  <h1>Positive training for confident dogs</h1>
+
+  <p class="tagline">
+    Kind, science-based dog training to strengthen the bond between you and your dog.
   </p>
-</section>
 
+  <p class="intro">
+    Hazel Tails Dog Training offers positive reinforcement training tailored to your dog’s
+    individual needs. Led by Ella Hazel Lane, trained through Green Dog Training,
+    our approach focuses on trust, confidence, and long-term success.
+  </p>
+
+  <p class="intro">
+    The full website is coming soon — please check back soon!
+  </p>
+
+</div>
+
+<!-- FOOTER -->
 <footer>
-  <img src="https://1drv.ms/i/c/24eb8b14a4d2e6d1/IQTpIrVz66pqR6yA8FdMinY6Af3TOOfOok4n2flls-Xcq0M?width=367&height=373">
+  <img
+    src="https://1drv.ms/i/c/24eb8b14a4d2e6d1/IQTpIrVz66pqR6yA8FdMinY6Af3TOOfOok4n2flls-Xcq0M?width=367&height=373"
+    alt="Hazel Tails Dog Training Logo"
+  >
   <p>© 2026 Hazel Tails Dog Training</p>
 </footer>
 
