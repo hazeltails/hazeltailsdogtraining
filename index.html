@@ -64,23 +64,116 @@
     }
 
     footer img { height: 50px; margin-bottom: 10px; }
+
+    .nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 12px 20px;
+  background: #f5f8f4;
+  border-bottom: 1px solid #dde5dd;
+}
+
+.nav-logo {
+  height: 42px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a,
+.dropbtn {
+  text-decoration: none;
+  font-weight: 600;
+  color: #2f2f2f;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+nav a:hover,
+.dropbtn:hover {
+  color: #4b7b55;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  border-radius: 6px;
+  top: 30px;
+  left: 0;
+  z-index: 1001;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: #2f2f2f;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f4ef;
+  color: #4b7b55;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
   </style>
 </head>
 
 <body>
 
 <div class="nav-bar">
-  <img src="https://1drv.ms/i/c/24eb8b14a4d2e6d1/IQTpIrVz66pqR6yA8FdMinY6Af3TOOfOok4n2flls-Xcq0M?width=367&height=373">
-  <nav>
-  <!--
-<a href="about.html">About</a>
-<a href="classes.html">Classes</a>
-<a href="blog.html">Blog</a>
-<a href="reviews.html">Reviews</a>
--->
+  <img
+    src="https://1drv.ms/i/c/24eb8b14a4d2e6d1/IQTpIrVz66pqR6yA8FdMinY6Af3TOOfOok4n2flls-Xcq0M?width=367&height=373"
+    alt="Hazel Tails Logo"
+    class="nav-logo"
+  >
 
+  <nav>
+    <a href="about.html">About</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Our Training ▾</button>
+      <div class="dropdown-content">
+        <a href="private-classes.html">Private Classes</a>
+        <a href="group-classes.html">Group Classes</a>
+        <a href="training-courses.html">Training Courses</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Contact Ella ▾</button>
+      <div class="dropdown-content">
+        <a href="book-consultation.html">Book a Consultation</a>
+      </div>
+    </div>
   </nav>
 </div>
+
 
 <header>
   <div class="banner">
