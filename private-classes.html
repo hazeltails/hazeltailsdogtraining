@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Private Dog Training | Hazel Tails Dog Training</title>
+
+  <meta
+    name="description"
+    content="One-to-one positive dog training tailored to you and your dog. Hazel Tails Dog Training offers puppy, adolescent and adult dog training."
+  >
+
+  <style>
+
+    /* =========================
+       COLOUR PALETTE
+       ========================= */
+
+    :root {
+      --forest: #294d38;
+      --green: #4b7b55;
+      --sage: #8da58c;
+      --cream: #faf8f2;
+      --light-green: #eef3ec;
+      --tan: #b18b58;
+      --dark: #2f342f;
+      --white: #ffffff;
+    }
+
+
+    /* =========================
+       GENERAL
+       ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* =========================
+       NAVIGATION
+       ========================= */
+
+    .nav-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 10px 5%;
+
+      background: rgba(250, 248, 242, 0.97);
+      border-bottom: 1px solid #dfe6dc;
+
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-logo {
+      height: 58px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a,
+    .dropbtn {
+      font-size: 15px;
+      font-weight: 600;
+
+      color: var(--dark);
+      text-decoration: none;
+
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      padding: 8px 0;
+    }
+
+    nav a:hover,
+    .dropbtn:hover {
+      color: var(--green);
+    }
+
+
+    /* =========================
+       DROPDOWNS
+       ========================= */
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+
+      position: absolute;
+      top: 100%;
+      left: -10px;
+
+      min-width: 210px;
+
+      background: var(--white);
+
+      border: 1px solid #e1e7df;
+      border-radius: 8px;
+
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+    }
+
+    .dropdown-content a:hover {
+      background: var(--light-green);
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+
+
+    /* =========================
+       PAGE HERO
+       ========================= */
+
+    .page-hero {
+      padding: 80px 20px 70px;
+
+      background:
+        linear-gradient(
+          rgba(238, 243, 236, 0.88),
+          rgba(250, 248, 242, 0.96)
+        );
+
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--green);
+
+      text-transform: uppercase;
+      letter-spacing: 3px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0 auto 18px;
+
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.15;
+    }
+
+    .hero-text {
+      max-width: 760px;
+      margin: 0 auto;
+
+      font-size: 19px;
+      color: #5a625a;
+    }
+
+
+    /* =========================
+       INTRO
+       ========================= */
+
+    .intro-section {
+      max-width: 900px;
+
+      margin: 0 auto;
+
+      padding: 75px 20px;
+
+      text-align: center;
+    }
+
+    h2 {
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(30px, 4vw, 42px);
+
+      margin: 0 0 18px;
+    }
+
+    .intro-section p {
+      font-size: 17px;
+      color: #5a605a;
+    }
+
+
+    /* =========================
+       WHAT PRIVATE TRAINING OFFERS
+       ========================= */
+
+    .benefits-section {
+      padding: 80px 5%;
+
+      background: var(--light-green);
+
+      text-align: center;
+    }
+
+    .benefits-grid {
+      max-width: 1050px;
+
+      margin: 45px auto 0;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .benefit {
+      background: var(--white);
+
+      padding: 30px 25px;
+
+      border-radius: 14px;
+
+      box-shadow:
+        0 5px 20px rgba(45, 65, 48, 0.07);
+    }
+
+    .benefit-icon {
+      font-size: 32px;
+
+      margin-bottom: 12px;
+    }
+
+    .benefit h3 {
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 23px;
+
+      margin: 0 0 10px;
+    }
+
+    .benefit p {
+      color: #5d635d;
+
+      margin: 0;
+    }
+
+
+    /* =========================
+       LIFE STAGES
+       ========================= */
+
+    .stages-section {
+      padding: 85px 5%;
+
+      background: var(--cream);
+
+      text-align: center;
+    }
+
+    .section-intro {
+      max-width: 750px;
+
+      margin: 0 auto 45px;
+
+      color: #5a625a;
+
+      font-size: 17px;
+    }
+
+    .stages-grid {
+      max-width: 1100px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .stage-card {
+      background: var(--white);
+
+      border-radius: 14px;
+
+      padding: 38px 28px;
+
+      border: 1px solid #e0e6de;
+
+      box-shadow:
+        0 5px 20px rgba(45, 65, 48, 0.06);
+    }
+
+    .stage-card h3 {
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 28px;
+
+      margin: 0 0 12px;
+    }
+
+    .stage-card p {
+      color: #5d635d;
+    }
+
+    .stage-highlight {
+      color: var(--green) !important;
+
+      font-weight: 700;
+
+      margin-top: 20px;
+    }
+
+
+    /* =========================
+       PACKAGES
+       ========================= */
+
+    .packages-section {
+      padding: 85px 5%;
+
+      background: var(--forest);
+
+      color: var(--white);
+
+      text-align: center;
+    }
+
+    .packages-section .eyebrow {
+      color: #c4d6c3;
+    }
+
+    .packages-section h2 {
+      color: var(--white);
+    }
+
+    .packages-intro {
+      max-width: 700px;
+
+      margin: 0 auto;
+
+      color: #e2ebe2;
+
+      font-size: 17px;
+    }
+
+    .package-grid {
+      max-width: 850px;
+
+      margin: 45px auto 0;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 25px;
+    }
+
+    .package {
+      background: var(--white);
+
+      color: var(--dark);
+
+      padding: 40px 30px;
+
+      border-radius: 15px;
+
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .package h3 {
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 27px;
+
+      margin: 0 0 5px;
+    }
+
+    .price {
+      color: var(--green);
+
+      font-size: 40px;
+
+      font-weight: 700;
+
+      margin: 10px 0;
+    }
+
+    .package-subtitle {
+      color: #666;
+
+      margin: 0 0 15px;
+    }
+
+    .free-session {
+      display: inline-block;
+
+      padding: 5px 13px;
+
+      margin-bottom: 15px;
+
+      background: #edf4eb;
+
+      color: var(--green);
+
+      border-radius: 20px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+    }
+
+    .package-note {
+      color: #666;
+
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       HOW IT WORKS
+       ========================= */
+
+    .process-section {
+      padding: 85px 5%;
+
+      text-align: center;
+
+      background: var(--cream);
+    }
+
+    .process-grid {
+      max-width: 950px;
+
+      margin: 45px auto 0;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 30px;
+    }
+
+    .process-step {
+      position: relative;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+
+      margin: 0 auto 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--green);
+
+      color: var(--white);
+
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .process-step h3 {
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 22px;
+
+      margin: 0 0 8px;
+    }
+
+    .process-step p {
+      color: #5d635d;
+
+      margin: 0;
+    }
+
+
+    /* =========================
+       PHILOSOPHY
+       ========================= */
+
+    .philosophy-section {
+      padding: 85px 20px;
+
+      background: #edf2eb;
+
+      text-align: center;
+    }
+
+    .philosophy-text {
+      max-width: 780px;
+
+      margin: 0 auto;
+
+      font-size: 18px;
+
+      color: #535b53;
+    }
+
+    .values {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 15px 35px;
+
+      margin-top: 30px;
+
+      color: var(--forest);
+
+      font-weight: 700;
+
+      letter-spacing: 1px;
+    }
+
+    .values span::after {
+      content: "•";
+
+      margin-left: 35px;
+
+      color: var(--tan);
+    }
+
+    .values span:last-child::after {
+      content: "";
+      margin: 0;
+    }
+
+
+    /* =========================
+       CTA
+       ========================= */
+
+    .cta-section {
+      padding: 85px 20px;
+
+      text-align: center;
+
+      background: var(--cream);
+    }
+
+    .cta-section p {
+      max-width: 700px;
+
+      margin: 15px auto;
+
+      color: #5a605a;
+
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 13px 28px;
+
+      background: var(--forest);
+
+      color: var(--white);
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--green);
+
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      padding: 45px 20px;
+
+      background: #e8eee6;
+
+      text-align: center;
+
+      color: #555c55;
+    }
+
+    footer img {
+      height: 65px;
+
+      width: auto;
+
+      margin: 0 auto 15px;
+    }
+
+    footer p {
+      margin: 5px 0;
+
+      font-size: 14px;
+    }
+
+    .instagram {
+      color: var(--green);
+
+      font-weight: 700;
+
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav-bar {
+        flex-direction: column;
+
+        gap: 5px;
+
+        padding: 10px 15px;
+      }
+
+      .nav-logo {
+        height: 50px;
+      }
+
+      nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 8px 18px;
+      }
+
+      nav a,
+      .dropbtn {
+        font-size: 14px;
+      }
+
+      .dropdown-content {
+        left: 50%;
+
+        transform: translateX(-50%);
+      }
+
+      .benefits-grid,
+      .stages-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+      }
+
+      .package-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+      }
+
+      .values {
+        flex-direction: column;
+
+        gap: 10px;
+      }
+
+      .values span::after {
+        display: none;
+      }
+    }
+
+
+    @media (max-width: 480px) {
+
+      nav {
+        gap: 5px 12px;
+      }
+
+      .page-hero {
+        padding: 60px 18px;
+      }
+
+      .hero-text {
+        font-size: 17px;
+      }
+
+      .price {
+        font-size: 35px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+     ========================= -->
+
+<header class="nav-bar">
+
+  <a
+    href="index.html"
+    aria-label="Hazel Tails Dog Training home"
+  >
+
+    <img
+      src="hazel-tails-logo.png"
+      alt="Hazel Tails Dog Training"
+      class="nav-logo"
+    >
+
+  </a>
+
+
+  <nav aria-label="Main navigation">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="about.html">
+      About
+    </a>
+
+
+    <div class="dropdown">
+
+      <button
+        class="dropbtn"
+        type="button"
+      >
+        Our Training ▾
+      </button>
+
+      <div class="dropdown-content">
+
+        <a href="private-classes.html">
+          Private Classes
+        </a>
+
+        <a href="group-classes.html">
+          Group Classes
+        </a>
+
+        <a href="training-courses.html">
+          Training Courses
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <a href="reviews.html">
+      Reviews
+    </a>
+
+
+    <div class="dropdown">
+
+      <button
+        class="dropbtn"
+        type="button"
+      >
+        Contact Ella ▾
+      </button>
+
+      <div class="dropdown-content">
+
+        <a href="book-consultation.html">
+          Book a Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+
+<!-- =========================
+     PAGE HERO
+     ========================= -->
+
+<section class="page-hero">
+
+  <div class="eyebrow">
+    One-to-One Dog Training
+  </div>
+
+  <h1>
+    Training designed around you and your dog.
+  </h1>
+
+  <p class="hero-text">
+    Personalised, positive training that helps you understand
+    your dog, build confidence and develop practical skills
+    for everyday life.
+  </p>
+
+</section>
+
+
+
+<!-- =========================
+     INTRODUCTION
+     ========================= -->
+
+<section class="intro-section">
+
+  <div class="eyebrow">
+    Private Classes
+  </div>
+
+  <h2>
+    Your dog. Your goals. Your training plan.
+  </h2>
+
+  <p>
+    Private training gives you the opportunity to work one-to-one
+    with Ella, focusing on the behaviours and skills that matter
+    most to you and your dog.
+  </p>
+
+  <p>
+    Sessions are tailored to your dog's individual needs rather
+    than following a one-size-fits-all programme. Whether you're
+    bringing home a new puppy, navigating adolescence or looking
+    for support with an adult dog, we'll work together to find
+    practical solutions that fit your everyday life.
+  </p>
+
+</section>
+
+
+
+<!-- =========================
+     BENEFITS
+     ========================= -->
+
+<section class="benefits-section">
+
+  <div class="eyebrow">
+    Why Private Training?
+  </div>
+
+  <h2>
+    Training that fits real life.
+  </h2>
+
+
+  <div class="benefits-grid">
+
+
+    <article class="benefit">
+
+      <div class="benefit-icon">
+        🐾
+      </div>
+
+      <h3>
+        Individualised
+      </h3>
+
+      <p>
+        Every dog learns differently. Your sessions are adapted
+        to your dog's personality, needs and learning history.
+      </p>
+
+    </article>
+
+
+    <article class="benefit">
+
+      <div class="benefit-icon">
+        🤝
+      </div>
+
+      <h3>
+        Support for You
+      </h3>
+
+      <p>
+        Training isn't just about teaching your dog. You'll learn
+        how to communicate clearly and confidently with them too.
+      </p>
+
+    </article>
+
+
+    <article class="benefit">
+
+      <div class="benefit-icon">
+        🌿
+      </div>
+
+      <h3>
+        Real-Life Skills
+      </h3>
+
+      <p>
+        We focus on useful skills that can make everyday life
+        easier, from walks and greetings to settling and recall.
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     LIFE STAGES
+     ========================= -->
+
+<section class="stages-section">
+
+  <div class="eyebrow">
+    Every Stage
+  </div>
+
+  <h2>
+    Where is your dog right now?
+  </h2>
+
+  <p class="section-intro">
+    Different stages of life bring different challenges.
+    Private training can help you support your dog through each
+    stage while building skills that last.
+  </p>
+
+
+  <div class="stages-grid">
+
+
+    <article class="stage-card">
+
+      <h3>
+        Puppies
+      </h3>
+
+      <p>
+        Help your puppy get the best possible start. Build
+        confidence, introduce important life skills and learn
+        how to navigate those exciting early months.
+      </p>
+
+      <p class="stage-highlight">
+        Small steps. Big adventures.
+      </p>
+
+    </article>
+
+
+    <article class="stage-card">
+
+      <h3>
+        Adolescents
+      </h3>
+
+      <p>
+        Teenage dogs can bring big emotions, endless energy
+        and new challenges. Learn how to work with your dog
+        through this stage rather than simply waiting for it
+        to pass.
+      </p>
+
+      <p class="stage-highlight">
+        Channel their energy into amazing things.
+      </p>
+
+    </article>
+
+
+    <article class="stage-card">
+
+      <h3>
+        Adult Dogs
+      </h3>
+
+      <p>
+        Whether you're starting from scratch or working on
+        an established behaviour, it's never too late to
+        develop new skills and strengthen your relationship.
+      </p>
+
+      <p class="stage-highlight">
+        Real progress. At any age.
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PACKAGES
+     ========================= -->
+
+<section class="packages-section">
+
+  <div class="eyebrow">
+    Private Training Packages
+  </div>
+
+  <h2>
+    Choose your training package.
+  </h2>
+
+  <p class="packages-intro">
+    Each session lasts one hour and is tailored to your dog's
+    individual needs and your training goals.
+  </p>
+
+
+  <div class="package-grid">
+
+
+    <article class="package">
+
+      <h3>
+        5 Sessions
+      </h3>
+
+      <div class="price">
+        €300
+      </div>
+
+      <p class="package-subtitle">
+        Five personalised one-hour sessions.
+      </p>
+
+      <p class="package-note">
+        A great starting point for building foundations,
+        addressing specific challenges or working towards
+        a particular training goal.
+      </p>
+
+    </article>
+
+
+    <article class="package">
+
+      <h3>
+        10 Sessions
+      </h3>
+
+      <div class="price">
+        €540
+      </div>
+
+      <span class="free-session">
+        1 SESSION FREE
+      </span>
+
+      <p class="package-subtitle">
+        Ten personalised one-hour sessions.
+      </p>
+
+      <p class="package-note">
+        More time to develop skills, build consistency and
+        work towards lasting change.
+      </p>
+
+    </article>
+
+
+  </div>
+
+
+  <a
+    href="book-consultation.html"
+    class="button"
+  >
+    Book a Consultation
+  </a>
+
+</section>
+
+
+
+<!-- =========================
+     HOW IT WORKS
+     ========================= -->
+
+<section class="process-section">
+
+  <div class="eyebrow">
+    Getting Started
+  </div>
+
+  <h2>
+    How it works
+  </h2>
+
+
+  <div class="process-grid">
+
+
+    <article class="process-step">
+
+      <div class="step-number">
+        1
+      </div>
+
+      <h3>
+        Tell me about your dog
+      </h3>
+
+      <p>
+        Start by booking a consultation so we can talk about
+        your dog, your goals and what you'd like help with.
+      </p>
+
+    </article>
+
+
+    <article class="process-step">
+
+      <div class="step-number">
+        2
+      </div>
+
+      <h3>
+        Build your plan
+      </h3>
+
+      <p>
+        We'll identify the skills that will make the biggest
+        difference and create a practical training approach.
+      </p>
+
+    </article>
+
+
+    <article class="process-step">
+
+      <div class="step-number">
+        3
+      </div>
+
+      <h3>
+        Train together
+      </h3>
+
+      <p>
+        We'll work through the training step by step, adapting
+        as your dog learns and your confidence grows.
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PHILOSOPHY
+     ========================= -->
+
+<section class="philosophy-section">
+
+  <div class="eyebrow">
+    The Hazel Tails Approach
+  </div>
+
+  <h2>
+    Positive training for every dog.
+  </h2>
+
+  <p class="philosophy-text">
+    Positive reinforcement training is about more than rewards.
+    It's about understanding behaviour, communicating clearly,
+    teaching useful alternatives and creating an environment
+    where dogs can learn successfully.
+  </p>
+
+
+  <div class="values">
+
+    <span>
+      Confidence
+    </span>
+
+    <span>
+      Connection
+    </span>
+
+    <span>
+      Real Life Skills
+    </span>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     FINAL CTA
+     ========================= -->
+
+<section class="cta-section">
+
+  <div class="eyebrow">
+    Ready to get started?
+  </div>
+
+  <h2>
+    Let's work together.
+  </h2>
+
+  <p>
+    Tell me about your dog and what you'd like to achieve.
+    We'll start from where you are and work towards where
+    you'd like to be.
+  </p>
+
+  <a
+    href="book-consultation.html"
+    class="button"
+  >
+    Book a Consultation
+  </a>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+     ========================= -->
+
+<footer>
+
+  <img
+    src="hazel-tails-logo.png"
+    alt="Hazel Tails Dog Training"
+  >
+
+  <p>
+    Positive Training for Every Dog.
+  </p>
+
+  <p>
+
+    <a
+      href="https://www.instagram.com/hazeltailsdogtraining"
+      class="instagram"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      @hazeltailsdogtraining
+    </a>
+
+  </p>
+
+  <p>
+    © 2026 Hazel Tails Dog Training
+  </p>
+
+</footer>
+
+
+</body>
+</html>
