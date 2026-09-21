@@ -1,533 +1,577 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Book a Consultation | Hazel Tails Dog Training</title>
+  <title>Book a Consultation | Hazel Tails Dog Training</title>
 
-    <meta name="description"
-          content="Book a consultation with Hazel Tails Dog Training. Positive training and personalised support for every dog.">
+  <style>
+    :root {
+      --forest: #294d38;
+      --green: #4b7b55;
+      --sage: #8da58c;
+      --cream: #faf8f2;
+      --light-green: #eef3ec;
+      --tan: #b18b58;
+      --dark: #2f342f;
+      --white: #ffffff;
+    }
 
-    <link rel="stylesheet" href="style.css">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      background: var(--white);
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      width: 170px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--forest);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--tan);
+    }
+
+    .nav-button {
+      background: var(--forest);
+      color: var(--white) !important;
+      padding: 10px 18px;
+      border-radius: 25px;
+    }
+
+    .nav-button:hover {
+      background: var(--green);
+    }
+
+    /* HERO */
+
+    .hero {
+      background: var(--light-green);
+      text-align: center;
+      padding: 80px 20px 70px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      color: var(--forest);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.15rem;
+      color: #505850;
+    }
+
+    /* MAIN */
+
+    .consultation-section {
+      max-width: 1100px;
+      margin: 70px auto;
+      padding: 0 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .content h2 {
+      font-family: Georgia, serif;
+      color: var(--forest);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      margin-bottom: 20px;
+    }
+
+    .content strong {
+      color: var(--forest);
+    }
+
+    .steps {
+      margin-top: 30px;
+    }
+
+    .step {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 25px;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      background: var(--forest);
+      color: var(--white);
+      min-width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .step h3 {
+      color: var(--forest);
+      margin-bottom: 4px;
+      font-size: 1.05rem;
+    }
+
+    /* CONTACT CARD */
+
+    .contact-card {
+      background: var(--white);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(41, 77, 56, 0.1);
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-family: Georgia, serif;
+      color: var(--forest);
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .contact-card p {
+      margin-bottom: 25px;
+    }
+
+    .email-button {
+      display: inline-block;
+      background: var(--forest);
+      color: var(--white);
+      padding: 15px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1.05rem;
+      transition: 0.2s ease;
+    }
+
+    .email-button:hover {
+      background: var(--green);
+      transform: translateY(-2px);
+    }
+
+    .email-address {
+      margin-top: 18px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .email-address a {
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    /* WHAT TO INCLUDE */
+
+    .include-section {
+      background: var(--light-green);
+      padding: 65px 25px;
+      text-align: center;
+    }
+
+    .include-section h2 {
+      font-family: Georgia, serif;
+      color: var(--forest);
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    .include-section > p {
+      max-width: 650px;
+      margin: 0 auto 35px;
+    }
+
+    .include-grid {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      text-align: left;
+    }
+
+    .include-item {
+      background: var(--white);
+      padding: 22px;
+      border-radius: 15px;
+    }
+
+    .include-item h3 {
+      color: var(--forest);
+      margin-bottom: 5px;
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+      padding: 75px 25px;
+    }
+
+    .cta h2 {
+      font-family: Georgia, serif;
+      color: var(--forest);
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--forest);
+      color: var(--white);
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: var(--white);
+    }
+
+    footer a:hover {
+      color: var(--tan);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .consultation-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .include-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 30px 20px;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .nav-logo img {
+        width: 145px;
+      }
+
+      .nav-links a {
+        font-size: 0.85rem;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+  <!-- NAVIGATION -->
 
-<header class="site-header">
+  <nav>
 
-    <div class="header-inner">
+    <a href="./index.html" class="nav-logo">
+      <img src="./hazel-tails-logo.png" alt="Hazel Tails Dog Training">
+    </a>
 
-        <a href="index.html" class="logo">
-            <img src="hazel-tails-logo.png"
-                 alt="Hazel Tails Dog Training">
+    <div class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./private-classes.html">Private Training</a>
+      <a href="./group-classes.html">Group Classes</a>
+      <a href="./reviews.html">Reviews</a>
+      <a href="./book-consultation.html" class="nav-button">Book a Consultation</a>
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>Let's talk about your dog.</h1>
+
+    <p>
+      Every dog is different, and every owner has their own goals.
+      Get in touch and we can talk about what's happening, what you'd
+      like to achieve, and how Hazel Tails can help.
+    </p>
+
+  </section>
+
+
+  <!-- CONSULTATION -->
+
+  <section class="consultation-section">
+
+    <div class="content">
+
+      <h2>A good place to start</h2>
+
+      <p>
+        You don't need to have everything figured out before getting in touch.
+        Whether you've just brought home a puppy, you're navigating the
+        teenage years, or you're looking for help with an older dog,
+        we can start from where you are.
+      </p>
+
+      <p>
+        Tell me a little about your dog and what you'd like help with.
+        I'll get back to you so we can arrange a consultation and decide
+        what type of training would be most useful.
+      </p>
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">1</div>
+
+          <div>
+            <h3>Tell me about your dog</h3>
+            <p>
+              Send me an email with a little information about your dog
+              and what you'd like help with.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">2</div>
+
+          <div>
+            <h3>We'll have a chat</h3>
+            <p>
+              We'll talk about your goals, your dog's needs and what
+              you're currently experiencing.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">3</div>
+
+          <div>
+            <h3>Make a plan</h3>
+            <p>
+              Together, we'll work out the most appropriate next step
+              for you and your dog.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- EMAIL CARD -->
+
+    <div class="contact-card">
+
+      <h2>Ready to get started?</h2>
+
+      <p>
+        Send me an email and tell me a little about you and your dog.
+      </p>
+
+      <!-- CHANGE THIS EMAIL ADDRESS -->
+
+      <a
+        href="mailto:hello@hazeltailsdogtraining.com?subject=Hazel%20Tails%20Consultation%20Enquiry"
+        class="email-button">
+        Email Me
+      </a>
+
+      <p class="email-address">
+        Or email
+        <a href="mailto:hello@hazeltailsdogtraining.com">
+          hello@hazeltailsdogtraining.com
         </a>
-
-        <nav class="main-nav">
-
-            <a href="index.html">Home</a>
-
-            <a href="about.html">About</a>
-
-            <div class="nav-dropdown">
-
-                <a href="#" class="dropdown-toggle">
-                    Our Training
-                </a>
-
-                <div class="dropdown-menu">
-
-                    <a href="group-classes.html">
-                        Group Classes
-                    </a>
-
-                    <a href="private-classes.html">
-                        Private Training
-                    </a>
-
-                    <a href="book-consultation.html">
-                        Book a Consultation
-                    </a>
-
-                </div>
-
-            </div>
-
-            <a href="reviews.html">Reviews</a>
-
-            <a href="book-consultation.html">
-                Contact Ella
-            </a>
-
-        </nav>
+      </p>
 
     </div>
 
-</header>
+  </section>
 
 
-<!-- =========================
-     PAGE HERO
-========================= -->
+  <!-- WHAT TO INCLUDE -->
 
-<section class="page-hero">
+  <section class="include-section">
 
-    <div class="container">
+    <h2>What should I include?</h2>
 
-        <p class="eyebrow">
-            Let's get started
-        </p>
+    <p>
+      Don't worry about writing the perfect email. A few simple details
+      are enough to get the conversation started.
+    </p>
 
-        <h1>
-            Book a Consultation
-        </h1>
+    <div class="include-grid">
 
-        <p class="hero-subtitle">
-            Every dog is different. Let's talk about yours.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     INTRODUCTION
-========================= -->
-
-<section class="section">
-
-    <div class="container narrow">
-
-        <p class="eyebrow">
-            A personalised approach
-        </p>
-
-        <h2>
-            Training starts with understanding
-        </h2>
-
+      <div class="include-item">
+        <h3>🐾 About your dog</h3>
         <p>
-            Whether you have a new puppy, a teenage whirlwind, or an
-            older dog who needs a little extra support, the first step
-            is simply having a conversation.
+          Their name, age, breed or mix, and anything else you think
+          would be useful to know.
         </p>
+      </div>
 
+      <div class="include-item">
+        <h3>💬 What you'd like help with</h3>
         <p>
-            A consultation gives us the chance to talk about your dog,
-            what's happening at the moment, and what you'd like to
-            achieve. From there, we can work out the most appropriate
-            way for Hazel Tails to support you.
+          Tell me what you're currently struggling with or what you'd
+          like your dog to learn.
         </p>
+      </div>
 
+      <div class="include-item">
+        <h3>🏡 Your everyday life</h3>
         <p>
-            There is no judgement and no one-size-fits-all approach.
-            Just positive, practical training designed around you
-            and your dog.
+          A little about your home, routine and the situations where
+          you'd most like things to improve.
         </p>
+      </div>
 
-    </div>
-
-</section>
-
-
-<!-- =========================
-     WHAT HAPPENS
-========================= -->
-
-<section class="section section-light">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="eyebrow">
-                What to expect
-            </p>
-
-            <h2>
-                Your consultation
-            </h2>
-
-            <p>
-                A relaxed conversation about you, your dog and how
-                we can work together.
-            </p>
-
-        </div>
-
-
-        <div class="card-grid">
-
-            <div class="info-card">
-
-                <div class="card-number">
-                    01
-                </div>
-
-                <h3>
-                    Tell me about your dog
-                </h3>
-
-                <p>
-                    We'll talk about their personality, history,
-                    current behaviour and anything you're finding
-                    challenging.
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <div class="card-number">
-                    02
-                </div>
-
-                <h3>
-                    Talk about your goals
-                </h3>
-
-                <p>
-                    Tell me what you'd like to change and what you'd
-                    love everyday life with your dog to look like.
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <div class="card-number">
-                    03
-                </div>
-
-                <h3>
-                    Create a plan
-                </h3>
-
-                <p>
-                    Together we'll work out the next steps and the
-                    training approach that best suits you and your dog.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     WHO CAN I HELP?
-========================= -->
-
-<section class="section">
-
-    <div class="container two-column">
-
-        <div>
-
-            <p class="eyebrow">
-                Hazel Tails can help with
-            </p>
-
-            <h2>
-                Everyday challenges, big and small
-            </h2>
-
-            <p>
-                You don't need to wait until something becomes a
-                serious problem before asking for help.
-            </p>
-
-            <ul class="check-list">
-
-                <li>
-                    Puppy training and foundations
-                </li>
-
-                <li>
-                    Loose-lead walking
-                </li>
-
-                <li>
-                    Recall
-                </li>
-
-                <li>
-                    Focus and engagement
-                </li>
-
-                <li>
-                    Settling and calm behaviour
-                </li>
-
-                <li>
-                    Building confidence
-                </li>
-
-                <li>
-                    Everyday manners
-                </li>
-
-                <li>
-                    Supporting your dog's individual needs
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <span class="feature-icon">
-                🐾
-            </span>
-
-            <h3>
-                No judgement. No quick fixes.
-            </h3>
-
-            <p>
-                Training isn't about making your dog "perfect".
-                It's about helping you and your dog understand
-                each other and building skills that make everyday
-                life easier.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     BOOKING / EMAIL
-========================= -->
-
-<section class="section section-light">
-
-    <div class="container narrow booking-section">
-
-        <p class="eyebrow">
-            Ready to get started?
-        </p>
-
-        <h2>
-            Let's talk about your dog
-        </h2>
-
+      <div class="include-item">
+        <h3>📅 Your availability</h3>
         <p>
-            The first step is simply to get in touch. Send me an
-            email telling me a little about you, your dog and what
-            you'd like help with.
+          Let me know roughly when you're available for training and
+          I'll do my best to find a suitable time.
         </p>
-
-        <p>
-            There's no need to write anything formal. Just tell me
-            your dog's name, age, a little about them and what you'd
-            like support with.
-        </p>
-
-
-        <div class="booking-action">
-
-            <a
-                href="mailto:YOUR-EMAIL@example.com?subject=Hazel%20Tails%20Consultation%20Enquiry"
-                class="button"
-            >
-                Email Ella
-            </a>
-
-            <p class="booking-email">
-
-                <a href="mailto:YOUR-EMAIL@example.com">
-                    YOUR-EMAIL@example.com
-                </a>
-
-            </p>
-
-        </div>
+      </div>
 
     </div>
 
-</section>
+  </section>
 
 
-<!-- =========================
-     WHAT TO INCLUDE
-========================= -->
+  <!-- CTA -->
 
-<section class="section">
+  <section class="cta">
 
-    <div class="container">
+    <h2>Small steps. Big adventures.</h2>
 
-        <div class="section-heading">
+    <p>
+      Training isn't about having a perfect dog.
+      It's about understanding each other and building skills
+      that make everyday life easier.
+    </p>
 
-            <p class="eyebrow">
-                Not sure what to write?
-            </p>
+    <a
+      href="mailto:hello@hazeltailsdogtraining.com?subject=Hazel%20Tails%20Consultation%20Enquiry"
+      class="email-button">
+      Get in Touch
+    </a>
 
-            <h2>
-                Just tell me a little about your dog
-            </h2>
-
-        </div>
-
-
-        <div class="card-grid">
-
-            <div class="info-card">
-
-                <h3>
-                    Your dog
-                </h3>
-
-                <p>
-                    Their name, age, breed or mix and a little about
-                    their personality.
-                </p>
-
-            </div>
+  </section>
 
 
-            <div class="info-card">
+  <!-- FOOTER -->
 
-                <h3>
-                    What's happening?
-                </h3>
+  <footer>
 
-                <p>
-                    Tell me about anything you're finding difficult
-                    or would like to change.
-                </p>
+    <p>
+      <strong>Hazel Tails Dog Training</strong>
+    </p>
 
-            </div>
+    <p>
+      Positive Training for Every Dog.
+    </p>
 
+    <p>
+      <a href="https://www.instagram.com/hazeltailsdogtraining" target="_blank">
+        Instagram
+      </a>
+    </p>
 
-            <div class="info-card">
+    <p>
+      © 2026 Hazel Tails Dog Training
+    </p>
 
-                <h3>
-                    Your goals
-                </h3>
-
-                <p>
-                    Tell me what you'd like to achieve and what you'd
-                    love life with your dog to look like.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FINAL CTA
-========================= -->
-
-<section class="cta-section">
-
-    <div class="container">
-
-        <span class="feature-icon">
-            🐾
-        </span>
-
-        <h2>
-            Positive Training for Every Dog.
-        </h2>
-
-        <p>
-            Helping dogs and their humans build confidence,
-            understanding and a happier life together.
-        </p>
-
-        <a
-            href="mailto:YOUR-EMAIL@example.com?subject=Hazel%20Tails%20Consultation%20Enquiry"
-            class="button button-light"
-        >
-            Get in Touch
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer class="site-footer">
-
-    <div class="footer-inner">
-
-        <div class="footer-brand">
-
-            <img
-                src="hazel-tails-logo.png"
-                alt="Hazel Tails Dog Training"
-            >
-
-            <p>
-                Positive Training for Every Dog.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="group-classes.html">
-                Group Classes
-            </a>
-
-            <a href="reviews.html">
-                Reviews
-            </a>
-
-            <a href="book-consultation.html">
-                Book a Consultation
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Hazel Tails Dog Training. All rights reserved.
-        </p>
-
-    </div>
-
-</footer>
-
+  </footer>
 
 </body>
 </html>
-```
