@@ -2,136 +2,976 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About | Hazel Tails Dog Training</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>About Ella | Hazel Tails Dog Training</title>
+
+  <meta
+    name="description"
+    content="Meet Ella, the founder of Hazel Tails Dog Training. Learn about her journey from biology and science teaching to professional dog training."
+  >
+
   <style>
+    /* =========================
+       COLOUR PALETTE
+       ========================= */
+
+    :root {
+      --forest: #294d38;
+      --green: #4b7b55;
+      --sage: #8da58c;
+      --cream: #faf8f2;
+      --light-green: #eef3ec;
+      --tan: #b18b58;
+      --dark: #2f342f;
+      --white: #ffffff;
+    }
+
+
+    /* =========================
+       GENERAL
+       ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #fafcf9;
-      color: #2f2f2f;
-      line-height: 1.6;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.7;
     }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* =========================
+       NAVIGATION
+       ========================= */
 
     .nav-bar {
-      position: fixed;
+      position: sticky;
       top: 0;
-      width: 100%;
       z-index: 1000;
+
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 20px;
-      padding: 12px 20px;
-      background: #f5f8f4;
-      border-bottom: 1px solid #dde5dd;
+      justify-content: space-between;
+
+      padding: 10px 5%;
+
+      background: rgba(250, 248, 242, 0.97);
+      border-bottom: 1px solid #dfe6dc;
+
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     }
 
-    .nav-bar img {
-      height: 42px;
+    .nav-logo {
+      height: 58px;
+      width: auto;
     }
 
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a,
+    .dropbtn {
+      font-size: 15px;
       font-weight: 600;
-      color: #2f2f2f;
+      color: var(--dark);
+      text-decoration: none;
+
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      padding: 8px 0;
     }
 
-    nav a:hover {
-      color: #4b7b55;
+    nav a:hover,
+    .dropbtn:hover {
+      color: var(--green);
     }
 
-    section {
+
+    /* =========================
+       DROPDOWNS
+       ========================= */
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+
+      position: absolute;
+      top: 100%;
+      left: -10px;
+
+      min-width: 210px;
+
+      background: var(--white);
+      border: 1px solid #e1e7df;
+      border-radius: 8px;
+
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+    }
+
+    .dropdown-content a:hover {
+      background: var(--light-green);
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+
+
+    /* =========================
+       PAGE HERO
+       ========================= */
+
+    .page-hero {
+      padding: 80px 20px 70px;
+
+      background: var(--light-green);
+
+      text-align: center;
+    }
+
+    .page-hero h1 {
       max-width: 900px;
-      margin: 120px auto 60px;
-      padding: 0 20px;
+
+      margin: 0 auto 15px;
+
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(38px, 6vw, 58px);
+
+      line-height: 1.15;
     }
 
-    h2 {
-      color: #4b7b55;
+    .page-hero p {
+      max-width: 700px;
+
+      margin: 0 auto;
+
+      color: #596159;
+
+      font-size: 19px;
     }
+
+
+    /* =========================
+       ABOUT INTRO
+       ========================= */
+
+    .about-section {
+      padding: 80px 20px;
+    }
+
+    .about-container {
+      max-width: 1050px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns: 0.85fr 1.15fr;
+
+      gap: 65px;
+
+      align-items: center;
+    }
+
+
+    /* =========================
+       ELLA IMAGE / PROFILE
+       ========================= */
+
+    .profile-area {
+      text-align: center;
+    }
+
+    .profile-placeholder {
+      width: 100%;
+      max-width: 380px;
+
+      aspect-ratio: 4 / 5;
+
+      margin: 0 auto;
+
+      background: var(--light-green);
+
+      border-radius: 18px;
+
+      border: 1px solid #dfe7dd;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      color: var(--green);
+
+      font-size: 15px;
+
+      padding: 30px;
+
+      text-align: center;
+    }
+
+    .profile-caption {
+      max-width: 380px;
+
+      margin: 18px auto 0;
+
+      color: #666d66;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       ABOUT TEXT
+       ========================= */
+
+    .about-text h2 {
+      margin: 0 0 25px;
+
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 38px;
+
+      line-height: 1.2;
+    }
+
+    .about-text p {
+      margin: 0 0 22px;
+
+      color: #555b55;
+
+      font-size: 17px;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* =========================
+       VALUES
+       ========================= */
+
+    .values-section {
+      padding: 80px 20px;
+
+      background: var(--light-green);
+
+      text-align: center;
+    }
+
+    .values-section h2 {
+      margin: 0 0 15px;
+
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(30px, 4vw, 42px);
+    }
+
+    .values-intro {
+      max-width: 700px;
+
+      margin: 0 auto 45px;
+
+      color: #5a625a;
+
+      font-size: 17px;
+    }
+
+    .values-grid {
+      max-width: 1050px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .value-card {
+      background: var(--white);
+
+      padding: 35px 25px;
+
+      border-radius: 14px;
+
+      box-shadow: 0 5px 20px rgba(45, 65, 48, 0.07);
+    }
+
+    .value-card h3 {
+      margin: 0 0 12px;
+
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 24px;
+    }
+
+    .value-card p {
+      margin: 0;
+
+      color: #5b605b;
+
+      font-size: 16px;
+    }
+
+
+    /* =========================
+       GREEN DOG TRAINING
+       ========================= */
+
+    .journey-section {
+      padding: 80px 20px;
+
+      background: var(--cream);
+
+      text-align: center;
+    }
+
+    .journey-container {
+      max-width: 850px;
+
+      margin: 0 auto;
+    }
+
+    .journey-section h2 {
+      margin: 0 0 25px;
+
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(30px, 4vw, 42px);
+    }
+
+    .journey-section p {
+      margin: 0 auto 22px;
+
+      color: #555b55;
+
+      font-size: 17px;
+    }
+
+
+    /* =========================
+       CTA
+       ========================= */
+
+    .cta-section {
+      padding: 80px 20px;
+
+      background: var(--forest);
+
+      color: var(--white);
+
+      text-align: center;
+    }
+
+    .cta-section .eyebrow {
+      color: #c7d9c8;
+    }
+
+    .cta-section h2 {
+      color: var(--white);
+
+      margin-bottom: 15px;
+    }
+
+    .cta-section p {
+      max-width: 700px;
+
+      margin: 0 auto;
+
+      color: #e5ece5;
+
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+
+      margin-top: 28px;
+
+      padding: 13px 26px;
+
+      background: var(--white);
+
+      color: var(--forest);
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--light-green);
+
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
 
     footer {
+      padding: 45px 20px;
+
+      background: #e8eee6;
+
       text-align: center;
-      padding: 40px 20px;
-      background: #eef2ed;
-      margin-top: 80px;
+
+      color: #555c55;
     }
 
     footer img {
-      height: 50px;
-      margin-bottom: 10px;
+      height: 65px;
+      width: auto;
+
+      margin: 0 auto 15px;
     }
+
+    footer p {
+      margin: 5px 0;
+
+      font-size: 14px;
+    }
+
+    .instagram {
+      color: var(--green);
+
+      font-weight: 700;
+
+      text-decoration: none;
+    }
+
+    .instagram:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav-bar {
+        flex-direction: column;
+
+        gap: 5px;
+
+        padding: 10px 15px;
+      }
+
+      .nav-logo {
+        height: 50px;
+      }
+
+      nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 8px 18px;
+      }
+
+      nav a,
+      .dropbtn {
+        font-size: 14px;
+      }
+
+      .dropdown-content {
+        position: absolute;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+      }
+
+      .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+      }
+
+      .profile-placeholder {
+        max-width: 320px;
+      }
+
+      .about-text h2 {
+        text-align: center;
+
+        font-size: 32px;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+      }
+    }
+
+
+    @media (max-width: 480px) {
+
+      nav {
+        gap: 5px 12px;
+      }
+
+      .page-hero {
+        padding: 60px 20px 50px;
+      }
+
+      .page-hero p {
+        font-size: 17px;
+      }
+
+      .about-section,
+      .values-section,
+      .journey-section {
+        padding: 60px 20px;
+      }
+
+      .about-text p,
+      .journey-section p {
+        font-size: 16px;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
-<div class="nav-bar">
-  <img
-    src="https://1drv.ms/i/c/24eb8b14a4d2e6d1/IQTpIrVz66pqR6yA8FdMinY6Af3TOOfOok4n2flls-Xcq0M?width=367&height=373"
-    alt="Hazel Tails Logo"
-    class="nav-logo"
-  >
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+  <!-- =========================
+       NAVIGATION
+       ========================= -->
 
-    <div class="dropdown">
-      <button class="dropbtn">Our Training ▾</button>
-      <div class="dropdown-content">
-        <a href="private-classes.html">Private Classes</a>
-        <a href="group-classes.html">Group Classes</a>
-        <a href="training-courses.html">Training Courses</a>
+  <header class="nav-bar">
+
+    <a
+      href="./index.html"
+      aria-label="Hazel Tails Dog Training home"
+    >
+
+      <img
+        src="./hazel-tails-logo.png"
+        alt="Hazel Tails Dog Training"
+        class="nav-logo"
+      >
+
+    </a>
+
+
+    <nav aria-label="Main navigation">
+
+      <a href="./index.html">
+        Home
+      </a>
+
+      <a href="./about.html">
+        About
+      </a>
+
+
+      <div class="dropdown">
+
+        <button
+          class="dropbtn"
+          type="button"
+        >
+          Our Training ▾
+        </button>
+
+        <div class="dropdown-content">
+
+          <a href="./private-classes.html">
+            Private Classes
+          </a>
+
+          <a href="./group-classes.html">
+            Group Classes
+          </a>
+
+          <a href="./training-courses.html">
+            Training Courses
+          </a>
+
+        </div>
+
       </div>
-    </div>
 
-    <a href="reviews.html">Reviews</a>
 
-    <div class="dropdown">
-      <button class="dropbtn">Contact Ella ▾</button>
-      <div class="dropdown-content">
-        <a href="book-consultation.html">Book a Consultation</a>
+      <a href="./reviews.html">
+        Reviews
+      </a>
+
+
+      <div class="dropdown">
+
+        <button
+          class="dropbtn"
+          type="button"
+        >
+          Contact Ella ▾
+        </button>
+
+        <div class="dropdown-content">
+
+          <a href="./book-consultation.html">
+            Book a Consultation
+          </a>
+
+        </div>
+
       </div>
-    </div>
-  </nav>
-</div>
 
-<section>
- <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>About Hazel Tails Dog Training</title>
-</head>
-<body style="font-family:Arial; text-align:center; padding:100px;">
-  <h1></h1>
-  <p>My name is Ella and I am from England. Dogs have always been a big part of my family life, and I grew up surrounded by them as part of our family pets. I have always been driven by a deep curiosity about how animals think and learn, especially dogs. This curiosity inspired me to undertake a biology degree, which later led into a career teaching secondary school science.</p>
-<p>
-In 2020 I moved to Spain/Castelldefels, and in 2024 I adopted my Labrador, Kili, and began training with Isabelle through Green Dog Training. Working closely with Kili deepened my understanding of everyday dog behaviour and communication, and inspired me to follow my passion professionally. He continues to be a big part of my learning an we love training together.</p>
+    </nav>
 
- <p>
+  </header>
 
-In 2026 I completed the Green Dog Training's Dog Trainer course, where I developed the skills to combine my scientific background with my teaching experience to help owners better understand their dogs and build stronger relationships with them.I believe that training should always be a positive experience for both dog and owner, strengthening trust, understanding, and connection.</p>
- <p>I set up Hazel Tails Dog Training as an affiliate of Green Dog Training, where I focus on my mission to give puppies the best possible start in life, to offer a reliable and dependable service providing consistency for you and your dog, and to do what I can to reduce the number of dogs that end up in shelters.</p>
- </p>
-  <p><a href="index.html"></a></p>
-</body>
-</html>
 
-</section>
+  <!-- =========================
+       PAGE HERO
+       ========================= -->
 
-<footer>
-  <img
-    src="https://1drv.ms/i/c/24eb8b14a4d2e6d1/IQTpIrVz66pqR6yA8FdMinY6Af3TOOfOok4n2flls-Xcq0M?width=367&height=373"
-    alt="Hazel Tails Dog Training"
-  >
-  <p>© 2026 Hazel Tails Dog Training</p>
-</footer>
+  <main>
+
+    <section class="page-hero">
+
+      <div class="eyebrow">
+        About Hazel Tails
+      </div>
+
+      <h1>
+        Meet Ella
+      </h1>
+
+      <p>
+        From a lifelong love of animals to helping dogs and their people
+        build stronger relationships.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT ELLA
+         ========================= -->
+
+    <section class="about-section">
+
+      <div class="about-container">
+
+
+        <div class="profile-area">
+
+          <!--
+            Replace this placeholder with a photo of Ella
+            when you are ready.
+
+            Example:
+
+            <img
+              src="./ella-and-kili.jpg"
+              alt="Ella with Kili"
+              class="profile-image"
+            >
+          -->
+
+          <div class="profile-placeholder">
+            A photo of Ella and Kili could go here.
+          </div>
+
+          <p class="profile-caption">
+            Ella and Kili
+          </p>
+
+        </div>
+
+
+        <div class="about-text">
+
+          <h2>
+            My journey into dog training
+          </h2>
+
+
+          <p>
+            My name is Ella and I am from England. Dogs have always been
+            a big part of my family life, and I grew up surrounded by them
+            as part of our family pets. I have always been driven by a deep
+            curiosity about how animals think and learn, especially dogs.
+            This curiosity inspired me to undertake a biology degree, which
+            later led into a career teaching secondary school science.
+          </p>
+
+
+          <p>
+            In 2020, I moved to Spain and settled in Castelldefels. In 2024,
+            I adopted my Labrador, Kili, and began training with Isabelle
+            through Green Dog Training. Working closely with Kili deepened
+            my understanding of everyday dog behaviour and communication,
+            and inspired me to follow my passion professionally. He continues
+            to be a big part of my learning, and we love training together.
+          </p>
+
+
+          <p>
+            In 2026, I completed the Green Dog Training Dog Trainer Course,
+            where I developed the skills to combine my scientific background
+            with my teaching experience to help owners better understand
+            their dogs and build stronger relationships with them.
+          </p>
+
+
+          <p>
+            I believe that training should always be a positive experience
+            for both dog and owner, strengthening trust, understanding and
+            connection.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MISSION
+         ========================= -->
+
+    <section class="journey-section">
+
+      <div class="journey-container">
+
+        <div class="eyebrow">
+          Why Hazel Tails?
+        </div>
+
+        <h2>
+          Training with a bigger purpose
+        </h2>
+
+
+        <p>
+          I set up Hazel Tails Dog Training as an affiliate of Green Dog
+          Training, with a focus on giving puppies the best possible start
+          in life and helping dogs and their owners build a strong foundation
+          together.
+        </p>
+
+
+        <p>
+          I want to provide a reliable and dependable service that gives
+          you and your dog consistency and support throughout your training
+          journey.
+        </p>
+
+
+        <p>
+          Most importantly, I want to do what I can to help reduce the number
+          of dogs that end up in shelters by helping owners understand their
+          dogs, build strong relationships with them and feel confident
+          navigating everyday life together.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         VALUES
+         ========================= -->
+
+    <section class="values-section">
+
+      <div class="eyebrow">
+        The Hazel Tails Approach
+      </div>
+
+      <h2>
+        What matters to me
+      </h2>
+
+      <p class="values-intro">
+        Good training is about more than teaching behaviours. It is about
+        helping dogs and their people understand one another and enjoy
+        life together.
+      </p>
+
+
+      <div class="values-grid">
+
+
+        <article class="value-card">
+
+          <h3>
+            Confidence
+          </h3>
+
+          <p>
+            Helping dogs develop the skills and confidence they need
+            to navigate the world around them.
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <h3>
+            Connection
+          </h3>
+
+          <p>
+            Building stronger relationships through communication,
+            trust and mutual understanding.
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <h3>
+            Real Life Skills
+          </h3>
+
+          <p>
+            Focusing on practical skills that make everyday life
+            easier, happier and more enjoyable for both of you.
+          </p>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+         ========================= -->
+
+    <section class="cta-section">
+
+      <div class="eyebrow">
+        Ready to get started?
+      </div>
+
+      <h2>
+        Let's work together.
+      </h2>
+
+      <p>
+        Whether you have a new puppy, an adolescent dog or an adult dog,
+        I'd love to help you and your dog build confidence, connection
+        and real-life skills.
+      </p>
+
+      <a
+        href="./book-consultation.html"
+        class="button"
+      >
+        Book a Consultation
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <img
+      src="./hazel-tails-logo.png"
+      alt="Hazel Tails Dog Training"
+    >
+
+    <p>
+      Positive Training for Every Dog.
+    </p>
+
+    <p>
+
+      <a
+        href="https://www.instagram.com/hazeltailsdogtraining"
+        class="instagram"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @hazeltailsdogtraining
+      </a>
+
+    </p>
+
+    <p>
+      © 2026 Hazel Tails Dog Training
+    </p>
+
+  </footer>
+
 
 </body>
 </html>
