@@ -36,57 +36,93 @@
       text-decoration: none;
     }
 
-    /* NAVIGATION */
+    /* =========================
+       NAVIGATION
+       ========================= */
 
-    nav {
-      background: var(--white);
-      padding: 18px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
+    .nav-bar {
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 10px 5%;
+
+      background: rgba(250, 248, 242, 0.97);
+      border-bottom: 1px solid #dfe6dc;
+
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     }
 
     .nav-logo {
+      height: 58px;
+      width: auto;
+    }
+
+    nav {
       display: flex;
       align-items: center;
+      gap: 28px;
     }
 
-    .nav-logo img {
-      width: 170px;
-      height: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: var(--forest);
+    nav a,
+    .dropbtn {
+      font-size: 15px;
       font-weight: 600;
-      font-size: 0.95rem;
+      color: var(--dark);
+      text-decoration: none;
+
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      padding: 8px 0;
     }
 
-    .nav-links a:hover {
-      color: var(--tan);
+    nav a:hover,
+    .dropbtn:hover {
+      color: var(--green);
     }
 
-    .nav-button {
-      background: var(--forest);
-      color: var(--white) !important;
-      padding: 10px 18px;
-      border-radius: 25px;
+    /* DROPDOWNS */
+
+    .dropdown {
+      position: relative;
     }
 
-    .nav-button:hover {
-      background: var(--green);
+    .dropdown-content {
+      display: none;
+
+      position: absolute;
+      top: 100%;
+      left: -10px;
+
+      min-width: 210px;
+
+      background: var(--white);
+      border: 1px solid #e1e7df;
+      border-radius: 8px;
+
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+    }
+
+    .dropdown-content a:hover {
+      background: var(--light-green);
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+      display: block;
     }
 
     /* HERO */
@@ -299,13 +335,32 @@
 
     @media (max-width: 800px) {
 
-      nav {
+      .nav-bar {
         flex-direction: column;
+        gap: 5px;
+        padding: 10px 15px;
       }
 
-      .nav-links {
+      .nav-logo {
+        height: 50px;
+      }
+
+      nav {
+        width: 100%;
         justify-content: center;
-        gap: 15px;
+        flex-wrap: wrap;
+        gap: 8px 18px;
+      }
+
+      nav a,
+      .dropbtn {
+        font-size: 14px;
+      }
+
+      .dropdown-content {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       .consultation-section {
@@ -322,14 +377,10 @@
       }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 480px) {
 
-      .nav-logo img {
-        width: 145px;
-      }
-
-      .nav-links a {
-        font-size: 0.85rem;
+      nav {
+        gap: 5px 12px;
       }
 
       .hero {
@@ -341,24 +392,86 @@
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- =========================
+       NAVIGATION
+       ========================= -->
 
-  <nav>
+  <header class="nav-bar">
 
-    <a href="./index.html" class="nav-logo">
-      <img src="./hazel-tails-logo.png" alt="Hazel Tails Dog Training">
+    <a
+      href="./index.html"
+      aria-label="Hazel Tails Dog Training home"
+    >
+      <img
+        src="./hazel-tails-logo.png"
+        alt="Hazel Tails Dog Training"
+        class="nav-logo"
+      >
     </a>
 
-    <div class="nav-links">
-      <a href="./index.html">Home</a>
-      <a href="./about.html">About</a>
-      <a href="./private-classes.html">Private Training</a>
-      <a href="./group-classes.html">Group Classes</a>
-      <a href="./reviews.html">Reviews</a>
-      <a href="./book-consultation.html" class="nav-button">Book a Consultation</a>
-    </div>
+    <nav aria-label="Main navigation">
 
-  </nav>
+      <a href="./index.html">
+        Home
+      </a>
+
+      <a href="./about.html">
+        About
+      </a>
+
+      <div class="dropdown">
+
+        <button
+          class="dropbtn"
+          type="button"
+        >
+          Our Training ▾
+        </button>
+
+        <div class="dropdown-content">
+
+          <a href="./private-classes.html">
+            Private Classes
+          </a>
+
+          <a href="./group-classes.html">
+            Group Classes
+          </a>
+
+          <a href="./training-courses.html">
+            Training Courses
+          </a>
+
+        </div>
+
+      </div>
+
+      <a href="./reviews.html">
+        Reviews
+      </a>
+
+      <div class="dropdown">
+
+        <button
+          class="dropbtn"
+          type="button"
+        >
+          Contact Ella ▾
+        </button>
+
+        <div class="dropdown-content">
+
+          <a href="./book-consultation.html">
+            Book a Consultation
+          </a>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
 
 
   <!-- HERO -->
