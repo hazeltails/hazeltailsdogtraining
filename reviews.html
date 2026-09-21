@@ -2,109 +2,1054 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About | Hazel Tails Dog Training</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Reviews | Hazel Tails Dog Training</title>
+
+  <meta
+    name="description"
+    content="Read reviews from Hazel Tails Dog Training clients about their experiences, progress and training journeys with their dogs."
+  >
+
   <style>
+    /* =========================
+       COLOUR PALETTE
+       ========================= */
+
+    :root {
+      --forest: #294d38;
+      --green: #4b7b55;
+      --sage: #8da58c;
+      --cream: #faf8f2;
+      --light-green: #eef3ec;
+      --tan: #b18b58;
+      --dark: #2f342f;
+      --white: #ffffff;
+      --border: #dfe6dc;
+    }
+
+
+    /* =========================
+       GENERAL
+       ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
+
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #fafcf9;
-      color: #2f2f2f;
-      line-height: 1.6;
+
+      background: var(--cream);
+
+      color: var(--dark);
+
+      line-height: 1.7;
     }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* =========================
+       NAVIGATION
+       ========================= */
 
     .nav-bar {
-      position: fixed;
+      position: sticky;
       top: 0;
-      width: 100%;
       z-index: 1000;
+
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 20px;
-      padding: 12px 20px;
-      background: #f5f8f4;
-      border-bottom: 1px solid #dde5dd;
+      justify-content: space-between;
+
+      padding: 10px 5%;
+
+      background: rgba(250, 248, 242, 0.97);
+
+      border-bottom: 1px solid var(--border);
+
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     }
 
-    .nav-bar img {
-      height: 42px;
+    .nav-logo {
+      height: 58px;
+      width: auto;
     }
 
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
+    nav {
+      display: flex;
+      align-items: center;
+
+      gap: 28px;
+    }
+
+    nav a,
+    .dropbtn {
+      font-size: 15px;
       font-weight: 600;
-      color: #2f2f2f;
+
+      color: var(--dark);
+
+      text-decoration: none;
+
+      background: none;
+
+      border: none;
+
+      cursor: pointer;
+
+      padding: 8px 0;
     }
 
-    nav a:hover {
-      color: #4b7b55;
+    nav a:hover,
+    .dropbtn:hover {
+      color: var(--green);
     }
 
-    section {
+
+    /* =========================
+       DROPDOWNS
+       ========================= */
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+
+      position: absolute;
+
+      top: 100%;
+      left: -10px;
+
+      min-width: 210px;
+
+      background: var(--white);
+
+      border: 1px solid #e1e7df;
+
+      border-radius: 8px;
+
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      display: block;
+
+      padding: 12px 16px;
+    }
+
+    .dropdown-content a:hover {
+      background: var(--light-green);
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+
+
+    /* =========================
+       PAGE HERO
+       ========================= */
+
+    .page-hero {
+      padding: 80px 20px 70px;
+
+      background: var(--light-green);
+
+      text-align: center;
+    }
+
+    .page-hero h1 {
       max-width: 900px;
-      margin: 120px auto 60px;
-      padding: 0 20px;
+
+      margin: 0 auto 15px;
+
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(38px, 6vw, 58px);
+
+      line-height: 1.15;
     }
 
-    h2 {
-      color: #4b7b55;
+    .page-hero p {
+      max-width: 720px;
+
+      margin: 0 auto;
+
+      color: #596159;
+
+      font-size: 19px;
     }
+
+
+    /* =========================
+       INTRO
+       ========================= */
+
+    .intro-section {
+      padding: 75px 20px 50px;
+
+      background: var(--cream);
+
+      text-align: center;
+    }
+
+    .intro-container {
+      max-width: 750px;
+
+      margin: 0 auto;
+    }
+
+    .intro-section h2 {
+      margin: 0 0 18px;
+
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(30px, 4vw, 42px);
+    }
+
+    .intro-section p {
+      margin: 0;
+
+      color: #5a625a;
+
+      font-size: 17px;
+    }
+
+
+    /* =========================
+       REVIEWS
+       ========================= */
+
+    .reviews-section {
+      padding: 50px 20px 85px;
+
+      background: var(--cream);
+    }
+
+    .reviews-grid {
+      max-width: 1100px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 25px;
+    }
+
+    .review-card {
+      position: relative;
+
+      padding: 35px 32px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: 16px;
+
+      box-shadow: 0 5px 20px rgba(45, 65, 48, 0.06);
+    }
+
+    .quote-mark {
+      position: absolute;
+
+      top: 15px;
+      right: 25px;
+
+      color: var(--sage);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 60px;
+
+      line-height: 1;
+
+      opacity: 0.5;
+    }
+
+    .stars {
+      margin-bottom: 15px;
+
+      color: var(--tan);
+
+      font-size: 18px;
+
+      letter-spacing: 3px;
+    }
+
+    .review-text {
+      margin: 0 0 22px;
+
+      color: #555b55;
+
+      font-size: 16px;
+
+      font-style: italic;
+    }
+
+    .review-author {
+      margin: 0;
+
+      color: var(--forest);
+
+      font-size: 15px;
+
+      font-weight: 700;
+    }
+
+    .review-dog {
+      margin: 3px 0 0;
+
+      color: #747b74;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       FEATURED REVIEW
+       ========================= */
+
+    .featured-section {
+      padding: 80px 20px;
+
+      background: var(--forest);
+
+      color: var(--white);
+
+      text-align: center;
+    }
+
+    .featured-container {
+      max-width: 850px;
+
+      margin: 0 auto;
+    }
+
+    .featured-section .eyebrow {
+      color: #c7d9c8;
+    }
+
+    .featured-section h2 {
+      margin: 0 0 30px;
+
+      color: var(--white);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(30px, 4vw, 42px);
+    }
+
+    .featured-quote {
+      margin: 0;
+
+      color: #e8eee8;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(20px, 3vw, 27px);
+
+      line-height: 1.6;
+
+      font-style: italic;
+    }
+
+    .featured-author {
+      margin: 25px 0 0;
+
+      color: #c7d9c8;
+
+      font-size: 15px;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       PLACEHOLDER MESSAGE
+       ========================= */
+
+    .coming-soon {
+      max-width: 750px;
+
+      margin: 0 auto;
+
+      padding: 35px;
+
+      background: var(--light-green);
+
+      border-radius: 14px;
+
+      text-align: center;
+    }
+
+    .coming-soon h3 {
+      margin: 0 0 10px;
+
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 25px;
+    }
+
+    .coming-soon p {
+      margin: 0;
+
+      color: #5b605b;
+
+      font-size: 16px;
+    }
+
+
+    /* =========================
+       LEAVE A REVIEW
+       ========================= */
+
+    .review-request {
+      padding: 80px 20px;
+
+      background: var(--light-green);
+
+      text-align: center;
+    }
+
+    .review-request-container {
+      max-width: 750px;
+
+      margin: 0 auto;
+    }
+
+    .review-request h2 {
+      margin: 0 0 15px;
+
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(30px, 4vw, 42px);
+    }
+
+    .review-request p {
+      margin: 0;
+
+      color: #5a625a;
+
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+
+      margin-top: 28px;
+
+      padding: 13px 26px;
+
+      background: var(--forest);
+
+      color: var(--white);
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--green);
+
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       CTA
+       ========================= */
+
+    .cta-section {
+      padding: 80px 20px;
+
+      background: var(--cream);
+
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      margin: 0 0 15px;
+
+      color: var(--forest);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(30px, 4vw, 42px);
+    }
+
+    .cta-section p {
+      max-width: 700px;
+
+      margin: 0 auto;
+
+      color: #5a625a;
+
+      font-size: 17px;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
 
     footer {
+      padding: 45px 20px;
+
+      background: #e8eee6;
+
       text-align: center;
-      padding: 40px 20px;
-      background: #eef2ed;
-      margin-top: 80px;
+
+      color: #555c55;
     }
 
     footer img {
-      height: 50px;
-      margin-bottom: 10px;
+      height: 65px;
+      width: auto;
+
+      margin: 0 auto 15px;
     }
+
+    footer p {
+      margin: 5px 0;
+
+      font-size: 14px;
+    }
+
+    .instagram {
+      color: var(--green);
+
+      font-weight: 700;
+
+      text-decoration: none;
+    }
+
+    .instagram:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav-bar {
+        flex-direction: column;
+
+        gap: 5px;
+
+        padding: 10px 15px;
+      }
+
+      .nav-logo {
+        height: 50px;
+      }
+
+      nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 8px 18px;
+      }
+
+      nav a,
+      .dropbtn {
+        font-size: 14px;
+      }
+
+      .dropdown-content {
+        position: absolute;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+      }
+    }
+
+
+    @media (max-width: 480px) {
+
+      nav {
+        gap: 5px 12px;
+      }
+
+      .page-hero {
+        padding: 60px 20px 50px;
+      }
+
+      .page-hero p {
+        font-size: 17px;
+      }
+
+      .intro-section,
+      .reviews-section,
+      .featured-section,
+      .review-request,
+      .cta-section {
+        padding: 60px 20px;
+      }
+
+      .review-card {
+        padding: 30px 25px;
+      }
+
+      .featured-quote {
+        font-size: 20px;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
 
-<div class="nav-bar">
-  <img
-    src="https://1drv.ms/i/c/24eb8b14a4d2e6d1/IQTpIrVz66pqR6yA8FdMinY6Af3TOOfOok4n2flls-Xcq0M?width=367&height=373"
-    alt="Hazel Tails Logo"
-  >
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="classes.html">Classes</a>
-    <a href="blog.html">Blog</a>
-    <a href="reviews.html">Reviews</a>
-  </nav>
-</div>
 
-<section>
- <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Coming Soon</title>
-</head>
-<body style="font-family:Arial; text-align:center; padding:100px;">
-  <h1>Coming Soon</h1>
-  <p>This page is currently being updated.</p>
-  <p><a href="index.html">Return to Home</a></p>
-</body>
-</html>
+  <!-- =========================
+       NAVIGATION
+       ========================= -->
 
-</section>
+  <header class="nav-bar">
 
-<footer>
-  <img
-    src="https://1drv.ms/i/c/24eb8b14a4d2e6d1/IQTpIrVz66pqR6yA8FdMinY6Af3TOOfOok4n2flls-Xcq0M?width=367&height=373"
-    alt="Hazel Tails Dog Training"
-  >
-  <p>© 2026 Hazel Tails Dog Training</p>
-</footer>
+    <a
+      href="./index.html"
+      aria-label="Hazel Tails Dog Training home"
+    >
+
+      <img
+        src="./hazel-tails-logo.png"
+        alt="Hazel Tails Dog Training"
+        class="nav-logo"
+      >
+
+    </a>
+
+
+    <nav aria-label="Main navigation">
+
+      <a href="./index.html">
+        Home
+      </a>
+
+      <a href="./about.html">
+        About
+      </a>
+
+
+      <div class="dropdown">
+
+        <button
+          class="dropbtn"
+          type="button"
+        >
+          Our Training ▾
+        </button>
+
+        <div class="dropdown-content">
+
+          <a href="./private-classes.html">
+            Private Classes
+          </a>
+
+          <a href="./group-classes.html">
+            Group Classes
+          </a>
+
+          <a href="./training-courses.html">
+            Training Courses
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <a href="./reviews.html">
+        Reviews
+      </a>
+
+
+      <div class="dropdown">
+
+        <button
+          class="dropbtn"
+          type="button"
+        >
+          Contact Ella ▾
+        </button>
+
+        <div class="dropdown-content">
+
+          <a href="./book-consultation.html">
+            Book a Consultation
+          </a>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       PAGE HERO
+       ========================= -->
+
+  <main>
+
+    <section class="page-hero">
+
+      <div class="eyebrow">
+        Happy Dogs. Happy People.
+      </div>
+
+      <h1>
+        What our clients say
+      </h1>
+
+      <p>
+        Every training journey is different. Here's what some of
+        the people I've worked with have to say.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+         ========================= -->
+
+    <section class="intro-section">
+
+      <div class="intro-container">
+
+        <div class="eyebrow">
+          Real experiences
+        </div>
+
+        <h2>
+          Training is a journey you take together.
+        </h2>
+
+        <p>
+          The most rewarding part of dog training is seeing the relationship
+          between a dog and their person grow. These reviews share some of
+          those journeys and the progress we've made together.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         REVIEWS
+         ========================= -->
+
+    <section class="reviews-section">
+
+      <div class="reviews-grid">
+
+
+        <!-- REVIEW 1 -->
+
+        <article class="review-card">
+
+          <div class="quote-mark">
+            “
+          </div>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p class="review-text">
+            Your review could appear here. This is where a client can
+            share their experience of training with Hazel Tails and
+            the difference it has made for them and their dog.
+          </p>
+
+          <p class="review-author">
+            Client Name
+          </p>
+
+          <p class="review-dog">
+            Dog's Name · Puppy Training
+          </p>
+
+        </article>
+
+
+        <!-- REVIEW 2 -->
+
+        <article class="review-card">
+
+          <div class="quote-mark">
+            “
+          </div>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p class="review-text">
+            A genuine client testimonial can go here. Reviews are a
+            great way for potential clients to understand what it is
+            like to work with you and what they might expect.
+          </p>
+
+          <p class="review-author">
+            Client Name
+          </p>
+
+          <p class="review-dog">
+            Dog's Name · Private Training
+          </p>
+
+        </article>
+
+
+        <!-- REVIEW 3 -->
+
+        <article class="review-card">
+
+          <div class="quote-mark">
+            “
+          </div>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p class="review-text">
+            Add another client experience here once you have received
+            a review you'd like to feature on the website.
+          </p>
+
+          <p class="review-author">
+            Client Name
+          </p>
+
+          <p class="review-dog">
+            Dog's Name · Adolescent Training
+          </p>
+
+        </article>
+
+
+        <!-- REVIEW 4 -->
+
+        <article class="review-card">
+
+          <div class="quote-mark">
+            “
+          </div>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p class="review-text">
+            This space can be used for another review highlighting
+            progress, confidence, communication or the relationship
+            between a dog and their owner.
+          </p>
+
+          <p class="review-author">
+            Client Name
+          </p>
+
+          <p class="review-dog">
+            Dog's Name · Private Training
+          </p>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURED REVIEW
+         ========================= -->
+
+    <section class="featured-section">
+
+      <div class="featured-container">
+
+        <div class="eyebrow">
+          A training philosophy
+        </div>
+
+        <h2>
+          It's about more than behaviour.
+        </h2>
+
+        <p class="featured-quote">
+          “The goal isn't to have a perfect dog.
+          It's to build a relationship where you understand
+          each other and can enjoy life together.”
+        </p>
+
+        <p class="featured-author">
+          — Hazel Tails Dog Training
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         LEAVE A REVIEW
+         ========================= -->
+
+    <section class="review-request">
+
+      <div class="review-request-container">
+
+        <div class="eyebrow">
+          Have we trained together?
+        </div>
+
+        <h2>
+          I'd love to hear about your experience.
+        </h2>
+
+        <p>
+          Your feedback can help other dog owners understand what
+          Hazel Tails training is like and decide whether it could
+          be right for them and their dog.
+        </p>
+
+        <a
+          href="./book-consultation.html"
+          class="button"
+        >
+          Get in Touch
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+         ========================= -->
+
+    <section class="cta-section">
+
+      <div class="eyebrow">
+        Start your own journey
+      </div>
+
+      <h2>
+        Ready to work together?
+      </h2>
+
+      <p>
+        Whether you have a new puppy, an adolescent dog or an adult dog,
+        let's work together to build confidence, connection and
+        real-life skills.
+      </p>
+
+      <a
+        href="./book-consultation.html"
+        class="button"
+      >
+        Book a Consultation
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <img
+      src="./hazel-tails-logo.png"
+      alt="Hazel Tails Dog Training"
+    >
+
+    <p>
+      Positive Training for Every Dog.
+    </p>
+
+    <p>
+
+      <a
+        href="https://www.instagram.com/hazeltailsdogtraining"
+        class="instagram"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @hazeltailsdogtraining
+      </a>
+
+    </p>
+
+    <p>
+      © 2026 Hazel Tails Dog Training
+    </p>
+
+  </footer>
+
 
 </body>
 </html>
