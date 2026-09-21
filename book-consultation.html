@@ -1,1257 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Group Training | Hazel Tails Dog Training</title>
+    <title>Book a Consultation | Hazel Tails Dog Training</title>
+    <meta name="description" content="Book a consultation with Hazel Tails Dog Training. Positive, personalised dog training for every dog and their humans.">
 
-  <meta
-    name="description"
-    content="Hazel Tails Dog Training group classes help dogs and their owners build confidence, communication and real-life skills in a supportive environment."
-  >
-
-  <style>
-    /* =========================
-       COLOUR PALETTE
-       ========================= */
-
-    :root {
-      --forest: #294d38;
-      --green: #4b7b55;
-      --sage: #8da58c;
-      --cream: #faf8f2;
-      --light-green: #eef3ec;
-      --tan: #b18b58;
-      --dark: #2f342f;
-      --white: #ffffff;
-    }
-
-
-    /* =========================
-       GENERAL
-       ========================= */
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--dark);
-      line-height: 1.7;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-    }
-
-
-    /* =========================
-       NAVIGATION
-       ========================= */
-
-    .nav-bar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      padding: 10px 5%;
-
-      background: rgba(250, 248, 242, 0.97);
-      border-bottom: 1px solid #dfe6dc;
-
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-    }
-
-    .nav-logo {
-      height: 58px;
-      width: auto;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    nav a,
-    .dropbtn {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--dark);
-      text-decoration: none;
-
-      background: none;
-      border: none;
-      cursor: pointer;
-
-      padding: 8px 0;
-    }
-
-    nav a:hover,
-    .dropbtn:hover {
-      color: var(--green);
-    }
-
-
-    /* =========================
-       DROPDOWNS
-       ========================= */
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content {
-      display: none;
-
-      position: absolute;
-      top: 100%;
-      left: -10px;
-
-      min-width: 210px;
-
-      background: var(--white);
-      border: 1px solid #e1e7df;
-      border-radius: 8px;
-
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-
-      overflow: hidden;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 12px 16px;
-    }
-
-    .dropdown-content a:hover {
-      background: var(--light-green);
-    }
-
-    .dropdown:hover .dropdown-content,
-    .dropdown:focus-within .dropdown-content {
-      display: block;
-    }
-
-
-    /* =========================
-       PAGE HERO
-       ========================= */
-
-    .page-hero {
-      padding: 80px 20px 70px;
-
-      background: var(--light-green);
-
-      text-align: center;
-    }
-
-    .page-hero h1 {
-      max-width: 900px;
-
-      margin: 0 auto 15px;
-
-      color: var(--forest);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(38px, 6vw, 58px);
-
-      line-height: 1.15;
-    }
-
-    .page-hero p {
-      max-width: 720px;
-
-      margin: 0 auto;
-
-      color: #596159;
-
-      font-size: 19px;
-    }
-
-
-    /* =========================
-       INTRODUCTION
-       ========================= */
-
-    .intro-section {
-      padding: 80px 20px;
-
-      background: var(--cream);
-
-      text-align: center;
-    }
-
-    .intro-container {
-      max-width: 850px;
-
-      margin: 0 auto;
-    }
-
-    .intro-section h2 {
-      margin: 0 0 20px;
-
-      color: var(--forest);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(30px, 4vw, 42px);
-    }
-
-    .intro-section p {
-      margin: 0 auto 20px;
-
-      color: #555b55;
-
-      font-size: 17px;
-    }
-
-
-    /* =========================
-       BENEFITS
-       ========================= */
-
-    .benefits-section {
-      padding: 80px 20px;
-
-      background: var(--light-green);
-
-      text-align: center;
-    }
-
-    .benefits-section h2 {
-      margin: 0 0 15px;
-
-      color: var(--forest);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(30px, 4vw, 42px);
-    }
-
-    .section-intro {
-      max-width: 700px;
-
-      margin: 0 auto 45px;
-
-      color: #5a625a;
-
-      font-size: 17px;
-    }
-
-    .benefits-grid {
-      max-width: 1100px;
-
-      margin: 0 auto;
-
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 25px;
-    }
-
-    .benefit-card {
-      background: var(--white);
-
-      padding: 35px 25px;
-
-      border-radius: 14px;
-
-      box-shadow: 0 5px 20px rgba(45, 65, 48, 0.07);
-    }
-
-    .benefit-card h3 {
-      margin: 0 0 12px;
-
-      color: var(--forest);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 24px;
-    }
-
-    .benefit-card p {
-      margin: 0;
-
-      color: #5b605b;
-
-      font-size: 16px;
-    }
-
-
-    /* =========================
-       WHAT WE WORK ON
-       ========================= */
-
-    .skills-section {
-      padding: 80px 20px;
-
-      background: var(--cream);
-
-      text-align: center;
-    }
-
-    .skills-container {
-      max-width: 950px;
-
-      margin: 0 auto;
-    }
-
-    .skills-section h2 {
-      margin: 0 0 15px;
-
-      color: var(--forest);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(30px, 4vw, 42px);
-    }
-
-    .skills-section > .skills-container > p {
-      max-width: 700px;
-
-      margin: 0 auto 40px;
-
-      color: #5a625a;
-
-      font-size: 17px;
-    }
-
-    .skills-list {
-      display: grid;
-
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 15px;
-
-      text-align: left;
-    }
-
-    .skill {
-      padding: 18px 22px;
-
-      background: var(--light-green);
-
-      border-radius: 10px;
-
-      border-left: 4px solid var(--green);
-
-      color: #4f564f;
-
-      font-size: 16px;
-    }
-
-    .skill strong {
-      color: var(--forest);
-    }
-
-
-    /* =========================
-       WHO IS IT FOR?
-       ========================= */
-
-    .audience-section {
-      padding: 80px 20px;
-
-      background: var(--forest);
-
-      color: var(--white);
-
-      text-align: center;
-    }
-
-    .audience-section h2 {
-      margin: 0 0 20px;
-
-      color: var(--white);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(30px, 4vw, 42px);
-    }
-
-    .audience-intro {
-      max-width: 750px;
-
-      margin: 0 auto 40px;
-
-      color: #e5ece5;
-
-      font-size: 17px;
-    }
-
-    .audience-grid {
-      max-width: 900px;
-
-      margin: 0 auto;
-
-      display: grid;
-
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 20px;
-    }
-
-    .audience-card {
-      padding: 28px;
-
-      background: rgba(255, 255, 255, 0.08);
-
-      border: 1px solid rgba(255, 255, 255, 0.15);
-
-      border-radius: 14px;
-    }
-
-    .audience-card h3 {
-      margin: 0 0 10px;
-
-      color: var(--white);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 23px;
-    }
-
-    .audience-card p {
-      margin: 0;
-
-      color: #e5ece5;
-
-      font-size: 15px;
-    }
-
-
-    /* =========================
-       GROUP CLASS FORMAT
-       ========================= */
-
-    .format-section {
-      padding: 80px 20px;
-
-      background: var(--cream);
-
-      text-align: center;
-    }
-
-    .format-section h2 {
-      margin: 0 0 15px;
-
-      color: var(--forest);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(30px, 4vw, 42px);
-    }
-
-    .format-intro {
-      max-width: 700px;
-
-      margin: 0 auto 45px;
-
-      color: #5a625a;
-
-      font-size: 17px;
-    }
-
-    .format-grid {
-      max-width: 1000px;
-
-      margin: 0 auto;
-
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 25px;
-    }
-
-    .format-card {
-      padding: 30px 25px;
-
-      background: var(--white);
-
-      border: 1px solid #e0e6de;
-
-      border-radius: 14px;
-
-      box-shadow: 0 5px 20px rgba(45, 65, 48, 0.06);
-    }
-
-    .format-number {
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      width: 42px;
-      height: 42px;
-
-      margin-bottom: 15px;
-
-      border-radius: 50%;
-
-      background: var(--green);
-
-      color: var(--white);
-
-      font-weight: 700;
-    }
-
-    .format-card h3 {
-      margin: 0 0 10px;
-
-      color: var(--forest);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 22px;
-    }
-
-    .format-card p {
-      margin: 0;
-
-      color: #5b605b;
-
-      font-size: 15px;
-    }
-
-
-    /* =========================
-       CTA
-       ========================= */
-
-    .cta-section {
-      padding: 80px 20px;
-
-      background: var(--light-green);
-
-      text-align: center;
-    }
-
-    .cta-section h2 {
-      margin: 0 0 15px;
-
-      color: var(--forest);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(30px, 4vw, 42px);
-    }
-
-    .cta-section p {
-      max-width: 700px;
-
-      margin: 0 auto;
-
-      color: #5a625a;
-
-      font-size: 17px;
-    }
-
-    .button {
-      display: inline-block;
-
-      margin-top: 28px;
-
-      padding: 13px 26px;
-
-      background: var(--forest);
-
-      color: var(--white);
-
-      border-radius: 30px;
-
-      text-decoration: none;
-
-      font-weight: 700;
-
-      transition: 0.2s ease;
-    }
-
-    .button:hover {
-      background: var(--green);
-
-      transform: translateY(-1px);
-    }
-
-
-    /* =========================
-       FOOTER
-       ========================= */
-
-    footer {
-      padding: 45px 20px;
-
-      background: #e8eee6;
-
-      text-align: center;
-
-      color: #555c55;
-    }
-
-    footer img {
-      height: 65px;
-      width: auto;
-
-      margin: 0 auto 15px;
-    }
-
-    footer p {
-      margin: 5px 0;
-
-      font-size: 14px;
-    }
-
-    .instagram {
-      color: var(--green);
-
-      font-weight: 700;
-
-      text-decoration: none;
-    }
-
-    .instagram:hover {
-      text-decoration: underline;
-    }
-
-
-    /* =========================
-       MOBILE
-       ========================= */
-
-    @media (max-width: 800px) {
-
-      .nav-bar {
-        flex-direction: column;
-
-        gap: 5px;
-
-        padding: 10px 15px;
-      }
-
-      .nav-logo {
-        height: 50px;
-      }
-
-      nav {
-        width: 100%;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 8px 18px;
-      }
-
-      nav a,
-      .dropbtn {
-        font-size: 14px;
-      }
-
-      .dropdown-content {
-        position: absolute;
-
-        left: 50%;
-
-        transform: translateX(-50%);
-      }
-
-      .benefits-grid,
-      .format-grid {
-        grid-template-columns: 1fr;
-
-        max-width: 500px;
-      }
-
-      .skills-list {
-        grid-template-columns: 1fr;
-
-        max-width: 600px;
-
-        margin: 0 auto;
-      }
-
-      .audience-grid {
-        grid-template-columns: 1fr;
-
-        max-width: 500px;
-      }
-    }
-
-
-    @media (max-width: 480px) {
-
-      nav {
-        gap: 5px 12px;
-      }
-
-      .page-hero {
-        padding: 60px 20px 50px;
-      }
-
-      .page-hero p {
-        font-size: 17px;
-      }
-
-      .intro-section,
-      .benefits-section,
-      .skills-section,
-      .audience-section,
-      .format-section,
-      .cta-section {
-        padding: 60px 20px;
-      }
-
-      .intro-section p,
-      .section-intro,
-      .skills-section > .skills-container > p,
-      .audience-intro,
-      .format-intro,
-      .cta-section p {
-        font-size: 16px;
-      }
-    }
-
-  </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
 
-  <!-- =========================
-       NAVIGATION
-       ========================= -->
+            <a href="index.html" class="logo-link">
+                <img src="hazel-tails-logo.png" alt="Hazel Tails Dog Training">
+            </a>
 
-  <header class="nav-bar">
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="group-classes.html">Group Classes</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="book-consultation.html" class="active">Book a Consultation</a>
+            </nav>
 
-    <a
-      href="./index.html"
-      aria-label="Hazel Tails Dog Training home"
-    >
-
-      <img
-        src="./hazel-tails-logo.png"
-        alt="Hazel Tails Dog Training"
-        class="nav-logo"
-      >
-
-    </a>
-
-
-    <nav aria-label="Main navigation">
-
-      <a href="./index.html">
-        Home
-      </a>
-
-      <a href="./about.html">
-        About
-      </a>
+        </div>
+    </header>
 
 
-      <div class="dropdown">
+    <!-- Hero -->
+    <section class="page-hero consultation-hero">
+        <div class="hero-content">
 
-        <button
-          class="dropbtn"
-          type="button"
-        >
-          Our Training ▾
-        </button>
+            <p class="eyebrow">Let's get started</p>
 
-        <div class="dropdown-content">
+            <h1>Book a Consultation</h1>
 
-          <a href="./private-classes.html">
-            Private Classes
-          </a>
+            <p class="hero-text">
+                Every dog is different, and your training should be too.
+                Let's chat about your dog, your goals and how Hazel Tails
+                can help.
+            </p>
 
-          <a href="./group-classes.html">
-            Group Classes
-          </a>
+        </div>
+    </section>
 
-          <a href="./training-courses.html">
-            Training Courses
-          </a>
+
+    <!-- Introduction -->
+    <main>
+
+        <section class="consultation-intro">
+            <div class="content-container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">A personalised approach</p>
+
+                    <h2>
+                        Training starts with understanding
+                    </h2>
+                </div>
+
+                <p>
+                    Whether you have a brand-new puppy, a teenage tornado,
+                    or an older dog who needs a little extra support, a
+                    consultation is the first step towards creating a
+                    training plan that works for both of you.
+                </p>
+
+                <p>
+                    We'll talk about what's happening at home, what you'd
+                    like to change, and what you'd love to achieve with
+                    your dog. There is no judgement and no one-size-fits-all
+                    approach — just practical, positive training designed
+                    around you and your dog.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- What happens -->
+        <section class="consultation-process">
+            <div class="content-container">
+
+                <div class="section-heading centred">
+                    <p class="eyebrow">What to expect</p>
+
+                    <h2>
+                        Your consultation
+                    </h2>
+
+                    <p>
+                        A relaxed conversation where we can get to know
+                        each other and work out how I can best support you.
+                    </p>
+                </div>
+
+
+                <div class="process-grid">
+
+                    <div class="process-card">
+
+                        <div class="process-number">1</div>
+
+                        <h3>Tell me about your dog</h3>
+
+                        <p>
+                            We'll talk about your dog's personality,
+                            history, current behaviour and anything you're
+                            finding challenging.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card">
+
+                        <div class="process-number">2</div>
+
+                        <h3>Talk about your goals</h3>
+
+                        <p>
+                            What would you like life with your dog to look
+                            like? We'll identify the things that matter most
+                            to you.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card">
+
+                        <div class="process-number">3</div>
+
+                        <h3>Create a plan</h3>
+
+                        <p>
+                            Together we'll work out the most appropriate
+                            next steps and the kind of training that will
+                            best suit you and your dog.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Who is it for -->
+        <section class="who-section">
+
+            <div class="content-container two-column">
+
+                <div class="who-text">
+
+                    <p class="eyebrow">Hazel Tails can help with</p>
+
+                    <h2>
+                        From puppy problems to everyday challenges
+                    </h2>
+
+                    <p>
+                        You don't need to wait until something becomes a
+                        serious problem before asking for help.
+                    </p>
+
+                    <ul class="training-list">
+                        <li>🐾 Puppy training and foundations</li>
+                        <li>🐾 Loose-lead walking</li>
+                        <li>🐾 Recall</li>
+                        <li>🐾 Focus and engagement</li>
+                        <li>🐾 Settling and calm behaviour</li>
+                        <li>🐾 Building confidence</li>
+                        <li>🐾 Everyday manners</li>
+                        <li>🐾 Supporting your dog's individual needs</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="who-callout">
+
+                    <div class="callout-inner">
+
+                        <span class="paw-icon">🐾</span>
+
+                        <h3>
+                            No judgement. No quick fixes.
+                        </h3>
+
+                        <p>
+                            Training isn't about making your dog
+                            "perfect". It's about helping you and your dog
+                            understand each other and building skills that
+                            make everyday life easier.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Booking -->
+        <section class="booking-section">
+
+            <div class="content-container booking-container">
+
+                <div class="booking-text">
+
+                    <p class="eyebrow">Ready to get started?</p>
+
+                    <h2>
+                        Let's talk about your dog
+                    </h2>
+
+                    <p>
+                        Fill in the form and tell me a little about yourself
+                        and your dog. I'll get back to you as soon as I can
+                        to arrange your consultation.
+                    </p>
+
+                    <p>
+                        There's no commitment at this stage — it's simply a
+                        chance for us to chat and see how Hazel Tails can
+                        help.
+                    </p>
+
+                </div>
+
+
+                <!-- Booking Form -->
+                <form class="booking-form" action="#" method="post">
+
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="phone">Phone number</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Your phone number"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="dog-name">Your dog's name</label>
+
+                        <input
+                            type="text"
+                            id="dog-name"
+                            name="dog-name"
+                            placeholder="Your dog's name"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="dog-age">Your dog's age</label>
+
+                        <input
+                            type="text"
+                            id="dog-age"
+                            name="dog-age"
+                            placeholder="e.g. 6 months, 3 years"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="help">
+                            What would you like help with?
+                        </label>
+
+                        <select id="help" name="help">
+
+                            <option value="">
+                                Please choose an option
+                            </option>
+
+                            <option value="puppy">
+                                Puppy training
+                            </option>
+
+                            <option value="basic">
+                                Basic / everyday training
+                            </option>
+
+                            <option value="walking">
+                                Loose-lead walking
+                            </option>
+
+                            <option value="recall">
+                                Recall
+                            </option>
+
+                            <option value="confidence">
+                                Confidence
+                            </option>
+
+                            <option value="behaviour">
+                                Behaviour support
+                            </option>
+
+                            <option value="other">
+                                Something else
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Tell me a little more
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Tell me about your dog and what you'd like help with..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="button button-primary">
+                        Send Enquiry
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+
+            <div class="content-container">
+
+                <span class="paw-icon">🐾</span>
+
+                <h2>
+                    Positive training for every dog.
+                </h2>
+
+                <p>
+                    Helping dogs and their humans build confidence,
+                    understanding and a happier life together.
+                </p>
+
+                <a href="index.html" class="button button-secondary">
+                    Back to Home
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <img
+                    src="hazel-tails-logo.png"
+                    alt="Hazel Tails Dog Training"
+                >
+
+                <p>
+                    Positive Training for Every Dog.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="group-classes.html">Group Classes</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="book-consultation.html">
+                    Book a Consultation
+                </a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <p>
+                    Hazel Tails Dog Training
+                </p>
+
+                <p>
+                    Positive, reward-based training
+                    for dogs and their humans.
+                </p>
+
+            </div>
 
         </div>
 
-      </div>
 
+        <div class="footer-bottom">
 
-      <a href="./reviews.html">
-        Reviews
-      </a>
-
-
-      <div class="dropdown">
-
-        <button
-          class="dropbtn"
-          type="button"
-        >
-          Contact Ella ▾
-        </button>
-
-        <div class="dropdown-content">
-
-          <a href="./book-consultation.html">
-            Book a Consultation
-          </a>
+            <p>
+                © 2026 Hazel Tails Dog Training. All rights reserved.
+            </p>
 
         </div>
 
-      </div>
-
-    </nav>
-
-  </header>
-
-
-  <!-- =========================
-       PAGE HERO
-       ========================= -->
-
-  <main>
-
-    <section class="page-hero">
-
-      <div class="eyebrow">
-        Group Training
-      </div>
-
-      <h1>
-        Learn together. Grow together.
-      </h1>
-
-      <p>
-        Supportive group training that helps you and your dog build
-        confidence, communication and real-life skills around other dogs.
-      </p>
-
-    </section>
-
-
-    <!-- =========================
-         INTRODUCTION
-         ========================= -->
-
-    <section class="intro-section">
-
-      <div class="intro-container">
-
-        <div class="eyebrow">
-          Training with others
-        </div>
-
-        <h2>
-          Real-life learning in a supportive environment.
-        </h2>
-
-        <p>
-          Group training gives dogs the opportunity to practise their skills
-          around other dogs, people and everyday distractions, while owners
-          learn how to support them in a calm and positive way.
-        </p>
-
-        <p>
-          Classes are designed to be encouraging and practical, with a focus
-          on helping each dog and owner make progress at their own pace.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         BENEFITS
-         ========================= -->
-
-    <section class="benefits-section">
-
-      <div class="eyebrow">
-        Why train in a group?
-      </div>
-
-      <h2>
-        More than just a class.
-      </h2>
-
-      <p class="section-intro">
-        Training alongside other dogs can create valuable opportunities
-        to practise the skills you need in everyday life.
-      </p>
-
-
-      <div class="benefits-grid">
-
-
-        <article class="benefit-card">
-
-          <h3>
-            Build Confidence
-          </h3>
-
-          <p>
-            Help your dog become more comfortable learning and working
-            in an environment with other dogs and people around them.
-          </p>
-
-        </article>
-
-
-        <article class="benefit-card">
-
-          <h3>
-            Practise Around Distractions
-          </h3>
-
-          <p>
-            Take the skills you have been learning and practise them
-            while there are interesting things happening around you.
-          </p>
-
-        </article>
-
-
-        <article class="benefit-card">
-
-          <h3>
-            Learn With Other Owners
-          </h3>
-
-          <p>
-            Share the experience with other dog owners and learn from
-            seeing different dogs, situations and training approaches.
-          </p>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         SKILLS
-         ========================= -->
-
-    <section class="skills-section">
-
-      <div class="skills-container">
-
-        <div class="eyebrow">
-          What we can work on
-        </div>
-
-        <h2>
-          Practical skills for everyday life.
-        </h2>
-
-        <p>
-          The exact focus of each class will depend on the dogs attending,
-          their experience and the goals of the group.
-        </p>
-
-
-        <div class="skills-list">
-
-
-          <div class="skill">
-            <strong>Focus and engagement</strong> — helping your dog
-            learn to pay attention to you in different environments.
-          </div>
-
-
-          <div class="skill">
-            <strong>Loose-lead walking</strong> — developing comfortable
-            and practical walking skills.
-          </div>
-
-
-          <div class="skill">
-            <strong>Recall</strong> — building reliable responses and
-            making coming back to you rewarding.
-          </div>
-
-
-          <div class="skill">
-            <strong>Settling</strong> — helping your dog learn how to
-            relax and settle when there is activity around them.
-          </div>
-
-
-          <div class="skill">
-            <strong>Impulse control</strong> — developing the ability
-            to pause, think and make good choices.
-          </div>
-
-
-          <div class="skill">
-            <strong>Communication</strong> — learning to recognise
-            what your dog is communicating and respond appropriately.
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         WHO IS IT FOR?
-         ========================= -->
-
-    <section class="audience-section">
-
-      <div class="eyebrow">
-        Finding the right fit
-      </div>
-
-      <h2>
-        Is group training right for your dog?
-      </h2>
-
-      <p class="audience-intro">
-        Group training can be a great way to practise everyday skills,
-        but every dog is different. The right starting point depends
-        on your dog's needs, experience and comfort level.
-      </p>
-
-
-      <div class="audience-grid">
-
-
-        <article class="audience-card">
-
-          <h3>
-            Puppies
-          </h3>
-
-          <p>
-            A chance to build positive foundations and learn important
-            skills while discovering the world.
-          </p>
-
-        </article>
-
-
-        <article class="audience-card">
-
-          <h3>
-            Adolescents
-          </h3>
-
-          <p>
-            A structured environment to channel energy, practise skills
-            and continue building good habits.
-          </p>
-
-        </article>
-
-
-        <article class="audience-card">
-
-          <h3>
-            Adult Dogs
-          </h3>
-
-          <p>
-            Continue learning, strengthen existing skills or work on
-            practical behaviours that make everyday life easier.
-          </p>
-
-        </article>
-
-
-        <article class="audience-card">
-
-          <h3>
-            Owners
-          </h3>
-
-          <p>
-            Learn how to communicate clearly, reinforce useful behaviours
-            and support your dog with confidence.
-          </p>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         HOW IT WORKS
-         ========================= -->
-
-    <section class="format-section">
-
-      <div class="eyebrow">
-        How it works
-      </div>
-
-      <h2>
-        A simple approach to group training.
-      </h2>
-
-      <p class="format-intro">
-        The aim is to make every class useful, positive and enjoyable
-        for both dogs and their people.
-      </p>
-
-
-      <div class="format-grid">
-
-
-        <article class="format-card">
-
-          <div class="format-number">
-            1
-          </div>
-
-          <h3>
-            Get to Know Your Dog
-          </h3>
-
-          <p>
-            We'll start by understanding your dog's experience,
-            personality and the skills you'd like to develop.
-          </p>
-
-        </article>
-
-
-        <article class="format-card">
-
-          <div class="format-number">
-            2
-          </div>
-
-          <h3>
-            Learn Together
-          </h3>
-
-          <p>
-            You'll learn practical training techniques and practise
-            them with your dog during the session.
-          </p>
-
-        </article>
-
-
-        <article class="format-card">
-
-          <div class="format-number">
-            3
-          </div>
-
-          <h3>
-            Take It Into Real Life
-          </h3>
-
-          <p>
-            Use the skills from class in your everyday life and
-            continue building on them between sessions.
-          </p>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         CTA
-         ========================= -->
-
-    <section class="cta-section">
-
-      <div class="eyebrow">
-        Ready to train together?
-      </div>
-
-      <h2>
-        Join a group class.
-      </h2>
-
-      <p>
-        Get in touch to find out about upcoming group training sessions
-        and whether they would be a good fit for you and your dog.
-      </p>
-
-      <a
-        href="./book-consultation.html"
-        class="button"
-      >
-        Get in Touch
-      </a>
-
-    </section>
-
-  </main>
-
-
-  <!-- =========================
-       FOOTER
-       ========================= -->
-
-  <footer>
-
-    <img
-      src="./hazel-tails-logo.png"
-      alt="Hazel Tails Dog Training"
-    >
-
-    <p>
-      Positive Training for Every Dog.
-    </p>
-
-    <p>
-
-      <a
-        href="https://www.instagram.com/hazeltailsdogtraining"
-        class="instagram"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        @hazeltailsdogtraining
-      </a>
-
-    </p>
-
-    <p>
-      © 2026 Hazel Tails Dog Training
-    </p>
-
-  </footer>
-
+    </footer>
 
 </body>
 </html>
