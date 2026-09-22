@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Individual dog walking with Hazel Tails Dog Training in Castelldefels and surrounding areas. Calm, personalised walks with a trained dog professional.">
+  <title>Dog Walking | Hazel Tails Dog Training</title>
+
+  <style>
+    :root {
+      --forest: #294d38;
+      --green: #4b7b55;
+      --sage: #8da58c;
+      --cream: #faf8f2;
+      --light-green: #eef3ec;
+      --tan: #b18b58;
+      --dark: #2f342f;
+      --white: #ffffff;
+      --border: #dfe7dc;
+      --shadow: 0 10px 30px rgba(41, 77, 56, 0.10);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: inherit; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(250, 248, 242, 0.97);
+      border-bottom: 1px solid rgba(41, 77, 56, 0.10);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand img { width: 190px; height: auto; }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .main-nav a,
+    .dropdown > summary {
+      color: var(--forest);
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .main-nav a:hover,
+    .dropdown > summary:hover { color: var(--tan); }
+
+    .dropdown { position: relative; }
+
+    .dropdown > summary::-webkit-details-marker { display: none; }
+
+    .dropdown > summary::after {
+      content: "⌄";
+      margin-left: 6px;
+      font-size: 0.8em;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 12px);
+      left: -12px;
+      min-width: 205px;
+      padding: 10px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 2px;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 9px 10px;
+      border-radius: 8px;
+    }
+
+    .dropdown-menu a:hover { background: var(--light-green); }
+
+    .instagram-nav {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .instagram-nav:hover { color: var(--tan); }
+
+    /* Hero */
+    .walking-hero {
+      min-height: 430px;
+      display: grid;
+      place-items: center;
+      padding: 70px 20px;
+      background:
+        radial-gradient(circle at 15% 25%, rgba(255,255,255,.72), transparent 30%),
+        linear-gradient(120deg, #dce7d9 0%, #f7f1e6 47%, #d7e1d1 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .walking-hero::before,
+    .walking-hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(141, 165, 140, 0.25);
+    }
+
+    .walking-hero::before {
+      width: 420px;
+      height: 420px;
+      left: -170px;
+      bottom: -250px;
+    }
+
+    .walking-hero::after {
+      width: 500px;
+      height: 500px;
+      right: -230px;
+      top: -270px;
+    }
+
+    .hero-card {
+      position: relative;
+      z-index: 1;
+      width: min(900px, 100%);
+      padding: 55px 45px;
+      text-align: center;
+      background: rgba(250,248,242,.90);
+      border: 1px solid rgba(41,77,56,.12);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin: 0 0 9px;
+      color: var(--tan);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      color: var(--forest);
+      line-height: 1.2;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.5rem, 6vw, 4.3rem);
+      margin-bottom: 12px;
+    }
+
+    .hero-tagline {
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.2rem, 3vw, 1.65rem);
+      font-style: italic;
+      margin: 0 auto 24px;
+    }
+
+    .hero-copy {
+      max-width: 680px;
+      margin: 0 auto 28px;
+      font-size: 1.06rem;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section { padding: 80px 0; }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    p { margin-top: 0; }
+
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 999px;
+      background: var(--forest);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .button:hover {
+      background: var(--green);
+      transform: translateY(-2px);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--forest);
+      border: 2px solid var(--forest);
+    }
+
+    .button.secondary:hover {
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    /* Intro */
+    .intro {
+      background: var(--cream);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .intro-copy p {
+      font-size: 1.08rem;
+    }
+
+    .highlight {
+      padding: 34px;
+      background: var(--light-green);
+      border-left: 5px solid var(--tan);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .highlight strong {
+      display: block;
+      color: var(--forest);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    /* Benefits */
+    .benefits {
+      background: var(--white);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .benefit {
+      padding: 30px 26px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .benefit-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 17px;
+      border-radius: 50%;
+      background: var(--sage);
+      color: var(--white);
+      font-size: 1.25rem;
+    }
+
+    /* Walk options */
+    .walk-options {
+      background: var(--light-green);
+    }
+
+    .walk-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .walk-card {
+      background: var(--white);
+      padding: 38px 32px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: 0 7px 22px rgba(41,77,56,.06);
+    }
+
+    .walk-card.featured {
+      border: 2px solid var(--tan);
+    }
+
+    .walk-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.65rem;
+    }
+
+    .duration {
+      color: var(--tan);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .price {
+      color: var(--forest);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.45rem;
+      font-weight: 700;
+      margin: 8px 0 12px;
+    }
+
+    .walk-card ul {
+      margin: 20px 0 0;
+      padding-left: 20px;
+    }
+
+    .walk-card li { margin-bottom: 7px; }
+
+    .small-note {
+      max-width: 760px;
+      margin: 28px auto 0;
+      text-align: center;
+      color: #687168;
+      font-size: .93rem;
+    }
+
+    /* Trainer advantage */
+    .trainer-section {
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    .trainer-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .trainer-section h2 { color: var(--white); }
+
+    .trainer-section .eyebrow { color: #d6b785; }
+
+    .trainer-box {
+      display: grid;
+      gap: 15px;
+    }
+
+    .trainer-point {
+      padding: 22px 24px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+    }
+
+    .trainer-point strong {
+      display: block;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    /* Process */
+    .process {
+      background: var(--cream);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .process-card {
+      padding: 28px 22px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 20px rgba(41,77,56,.06);
+    }
+
+    .process-number {
+      color: var(--tan);
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      margin-bottom: 12px;
+    }
+
+    /* FAQs */
+    .faq {
+      background: var(--white);
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: 0 auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    details.faq-item {
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--cream);
+      padding: 0 20px;
+    }
+
+    .faq-item summary {
+      padding: 18px 0;
+      color: var(--forest);
+      font-weight: 800;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      float: right;
+      color: var(--tan);
+      font-size: 1.3rem;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 0 18px;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 85px 0;
+      background: var(--light-green);
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 730px;
+      margin: 0 auto;
+    }
+
+    .cta h2 { margin-bottom: 14px; }
+
+    .cta p {
+      font-size: 1.08rem;
+      margin-bottom: 28px;
+    }
+
+    footer {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      padding: 35px 20px;
+      text-align: center;
+      color: #687168;
+      font-size: .9rem;
+    }
+
+    footer strong { color: var(--forest); }
+
+    @media (max-width: 900px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-nav {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .intro-grid,
+      .trainer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .nav-container { padding: 12px 16px; }
+
+      .brand img { width: 165px; }
+
+      .main-nav {
+        gap: 10px 14px;
+        font-size: .88rem;
+      }
+
+      .dropdown-menu {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 120px;
+      }
+
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .section { padding: 58px 0; }
+
+      .hero-card {
+        padding: 40px 24px;
+      }
+
+      .benefits-grid,
+      .walk-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+
+    <a class="brand" href="./index.html" aria-label="Hazel Tails Dog Training home">
+      <img src="./hazel-tails-logo.png" alt="Hazel Tails Dog Training">
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+
+      <details class="dropdown">
+        <summary>Our Training</summary>
+        <div class="dropdown-menu">
+          <a href="./private-classes.html">Private Classes</a>
+          <a href="./group-classes.html">Group Classes</a>
+          <a href="./training-courses.html">Training Courses</a>
+        </div>
+      </details>
+
+      <a href="./reviews.html">Reviews</a>
+
+      <details class="dropdown">
+        <summary>Contact Ella</summary>
+        <div class="dropdown-menu">
+          <a href="./book-consultation.html">Book a Consultation</a>
+        </div>
+      </details>
+
+      <a
+        href="https://www.instagram.com/hazeltailsdogtraining"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="instagram-nav"
+      >
+        Instagram ↗
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- Dog Walking Hero -->
+  <section class="walking-hero">
+    <div class="hero-card">
+      <p class="eyebrow">Dog Walking</p>
+      <h1>More than a walk.</h1>
+      <p class="hero-tagline">
+        A positive experience for your dog.
+      </p>
+      <p class="hero-copy">
+        Individual dog walks designed around your dog's needs, personality
+        and routine — giving them time to explore, sniff, move and enjoy
+        their day while you're busy.
+      </p>
+      <a class="button" href="./book-consultation.html">
+        Enquire About Dog Walking
+      </a>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="section intro">
+    <div class="container intro-grid">
+
+      <div class="intro-copy">
+        <p class="eyebrow">Personalised care</p>
+        <h2>Walks that work for your dog</h2>
+
+        <p>
+          Not every dog wants the same kind of walk. Some love a long
+          adventure, some prefer time to sniff and explore, and some benefit
+          from a calmer, more predictable outing.
+        </p>
+
+        <p>
+          Hazel Tails offers individual walks, giving your dog one-to-one
+          attention rather than being part of a large group. Walks can be
+          adapted to your dog's age, energy level, confidence and usual
+          routine.
+        </p>
+      </div>
+
+      <div class="highlight">
+        <strong>Calm. Individual. Positive.</strong>
+        <p>
+          Your dog gets dedicated attention from the same familiar person,
+          with their wellbeing and enjoyment at the centre of every walk.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section benefits">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">Why individual walks?</p>
+        <h2>A walk designed around your dog</h2>
+        <p>
+          Individual walks can be especially useful for dogs who don't enjoy
+          large group walks or who simply benefit from having more
+          personalised attention.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+
+        <article class="benefit">
+          <div class="benefit-icon">🐾</div>
+          <h3>Time to explore</h3>
+          <p>
+            Dogs need more than physical exercise. Sniffing, exploring and
+            experiencing their environment are important parts of a
+            fulfilling walk.
+          </p>
+        </article>
+
+        <article class="benefit">
+          <div class="benefit-icon">♥</div>
+          <h3>Individual attention</h3>
+          <p>
+            Your dog isn't one of several dogs being managed at once. Their
+            pace, needs and comfort can guide the walk.
+          </p>
+        </article>
+
+        <article class="benefit">
+          <div class="benefit-icon">✦</div>
+          <h3>Positive experiences</h3>
+          <p>
+            Walks are approached with patience and positive reinforcement,
+            helping your dog enjoy getting out and about.
+          </p>
+        </article>
+
+        <article class="benefit">
+          <div class="benefit-icon">◌</div>
+          <h3>Routine & consistency</h3>
+          <p>
+            Keeping walks predictable and working with your dog's normal
+            routine can help them feel comfortable and settled.
+          </p>
+        </article>
+
+        <article class="benefit">
+          <div class="benefit-icon">↗</div>
+          <h3>Real-life skills</h3>
+          <p>
+            Where appropriate, everyday walking behaviours such as attention
+            and calm lead walking can be reinforced naturally.
+          </p>
+        </article>
+
+        <article class="benefit">
+          <div class="benefit-icon">☀</div>
+          <h3>A happy break in their day</h3>
+          <p>
+            Whether you're at work or simply unable to get out, your dog gets
+            dedicated time outside with someone who genuinely cares about
+            dogs.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Walk options -->
+  <section class="section walk-options">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">Choose your walk</p>
+        <h2>Simple, flexible options</h2>
+        <p>
+          Choose the length that works best for your dog and their routine.
+        </p>
+      </div>
+
+      <div class="walk-grid">
+
+        <article class="walk-card">
+          <span class="duration">30 minute walk</span>
+          <h3>Quick & purposeful</h3>
+          <div class="price">€12</div>
+          <p>
+            A shorter individual outing for dogs who need a break during the
+            day, a toilet break and some time to explore.
+          </p>
+
+          <ul>
+            <li>Individual walk</li>
+            <li>Time to sniff and explore</li>
+            <li>Positive reinforcement where appropriate</li>
+            <li>Suitable for shorter daily outings</li>
+          </ul>
+        </article>
+
+        <article class="walk-card featured">
+          <span class="duration">60 minute walk</span>
+          <h3>Time to explore</h3>
+          <div class="price">€18</div>
+          <p>
+            A longer walk with more time for exploration, enrichment and
+            movement at your dog's pace.
+          </p>
+
+          <ul>
+            <li>Individual walk</li>
+            <li>More time for sniffing and exploration</li>
+            <li>Positive reinforcement where appropriate</li>
+            <li>Ideal for dogs needing a longer outing</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <p class="small-note">
+        Prices shown are proposed starting rates and can be adjusted to
+        reflect your final Hazel Tails service area, travel time and
+        booking arrangements.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Why Hazel Tails / trainer advantage -->
+  <section class="section trainer-section">
+    <div class="container trainer-grid">
+
+      <div>
+        <p class="eyebrow">The Hazel Tails difference</p>
+        <h2>A dog walker who understands training.</h2>
+
+        <p>
+          Hazel Tails isn't just about getting your dog out of the house.
+          With professional dog training experience, I understand that
+          every dog has different communication, learning and behavioural
+          needs.
+        </p>
+
+        <p>
+          The focus is always on providing a positive, safe and enjoyable
+          experience — while supporting the everyday skills that help dogs
+          and their owners thrive together.
+        </p>
+      </div>
+
+      <div class="trainer-box">
+
+        <div class="trainer-point">
+          <strong>Positive reinforcement</strong>
+          Reward-based interactions that encourage behaviours we want to
+          see again.
+        </div>
+
+        <div class="trainer-point">
+          <strong>Individualised care</strong>
+          Walks adapted to your dog's age, personality, confidence and
+          physical needs.
+        </div>
+
+        <div class="trainer-point">
+          <strong>One familiar person</strong>
+          Building familiarity and trust rather than regularly introducing
+          your dog to different walkers.
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section process">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">Getting started</p>
+        <h2>How it works</h2>
+        <p>
+          Before the first walk, we'll make sure the service is a good fit
+          for both you and your dog.
+        </p>
+      </div>
+
+      <div class="process-grid">
+
+        <article class="process-card">
+          <div class="process-number">01 — ENQUIRE</div>
+          <h3>Tell me about your dog</h3>
+          <p>
+            Get in touch with your dog's age, routine, needs and the type of
+            walking support you're looking for.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">02 — MEET</div>
+          <h3>Arrange a meet & greet</h3>
+          <p>
+            We'll meet before the first walk so your dog can get to know me
+            and we can discuss their routine.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">03 — WALK</div>
+          <h3>Your dog gets their outing</h3>
+          <p>
+            I'll collect your dog, take them on their individual walk and
+            return them safely home afterwards.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">04 — UPDATE</div>
+          <h3>Stay in the loop</h3>
+          <p>
+            You'll receive an update after the walk so you know how your dog
+            got on.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="section faq">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">Good to know</p>
+        <h2>Dog walking FAQs</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>Do you walk dogs individually?</summary>
+          <div class="faq-answer">
+            <p>
+              Yes. Hazel Tails dog walks are designed as individual walks,
+              allowing the outing to be tailored to your dog rather than
+              managing a large group.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What areas do you cover?</summary>
+          <div class="faq-answer">
+            <p>
+              Dog walking is currently focused around Castelldefels and
+              nearby areas. Your exact location will be confirmed when you
+              enquire.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can you walk puppies?</summary>
+          <div class="faq-answer">
+            <p>
+              Puppy walks can be considered depending on your puppy's age,
+              vaccination status, routine and individual needs. We'll discuss
+              this during the initial enquiry.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can you reinforce training during the walk?</summary>
+          <div class="faq-answer">
+            <p>
+              Everyday skills such as attention and calm lead walking can be
+              naturally reinforced where appropriate. If you are looking for
+              dedicated behavioural or training work, a Private Class is a
+              better option.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What happens if my dog is nervous or doesn't like other dogs?</summary>
+          <div class="faq-answer">
+            <p>
+              This is something we'll discuss before accepting a booking.
+              Individual walks can be suitable for dogs who don't enjoy group
+              walks, but your dog's safety and wellbeing will always come
+              first.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What happens if it is extremely hot or bad weather?</summary>
+          <div class="faq-answer">
+            <p>
+              Your dog's welfare comes first. Walks may be shortened,
+              rescheduled or adapted when weather conditions make a normal
+              walk unsuitable. This is particularly important during periods
+              of high heat.
+            </p>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <p class="eyebrow">Let's get your dog out exploring</p>
+      <h2>Looking for a dog walker you can trust?</h2>
+      <p>
+        Tell me about your dog, where you are based and what kind of walking
+        support you're looking for. We can arrange a meet and greet and see
+        whether Hazel Tails is the right fit.
+      </p>
+
+      <a class="button" href="./book-consultation.html">
+        Enquire About Dog Walking
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    <strong>Hazel Tails Dog Training</strong><br>
+    Positive Training for Every Dog.
+  </p>
+  <p>&copy; 2026 Hazel Tails Dog Training. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
