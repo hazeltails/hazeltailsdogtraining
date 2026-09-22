@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puppy Course | Hazel Tails Dog Training</title>
+<meta name="description" content="A positive puppy course for puppies aged 3–5 months, building confidence, connection and real-life skills from the start.">
+<style>
+:root{--forest:#294d38;--green:#4b7b55;--sage:#8da58c;--cream:#faf8f2;--light-green:#eef3ec;--tan:#b18b58;--dark:#2f342f;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:var(--cream);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.nav-bar{position:sticky;top:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:30px;padding:14px 5%;background:var(--white);box-shadow:0 2px 12px rgba(47,52,47,.08)}
+.nav-logo img{width:150px;height:auto;display:block}
+nav{display:flex;align-items:center;gap:24px;font-size:.95rem}
+nav a,.dropbtn{color:var(--forest);font-weight:600;cursor:pointer}
+nav a:hover,.dropbtn:hover{color:var(--tan)}
+.dropdown{position:relative}.dropbtn{background:none;border:0;font:inherit;padding:0}
+.dropdown-content{display:none;position:absolute;top:100%;left:0;min-width:190px;padding:10px 0;background:var(--white);box-shadow:0 8px 20px rgba(47,52,47,.12);border-radius:8px}
+.dropdown-content a{display:block;padding:9px 16px;white-space:nowrap}.dropdown:hover .dropdown-content{display:block}
+.instagram-nav{color:var(--green);font-weight:700}.instagram-nav:hover{color:var(--tan)}
+
+.course-hero{background:linear-gradient(rgba(41,77,56,.78),rgba(41,77,56,.78)),url("./hazel-tails-banner.png") center/cover no-repeat;min-height:430px;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 5%;color:var(--white)}
+.course-hero-content{max-width:850px}.course-hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.1;margin-bottom:18px}.course-hero p{font-size:1.2rem;max-width:680px;margin:0 auto}.age-badge{display:inline-block;margin-top:24px;padding:9px 18px;border-radius:30px;background:var(--white);color:var(--forest);font-weight:700}
+.section{padding:75px 5%}.section-inner{max-width:1050px;margin:0 auto}.section-heading{text-align:center;margin-bottom:45px}.section-heading h2{font-family:Georgia,"Times New Roman",serif;color:var(--forest);font-size:clamp(2rem,4vw,3rem);margin-bottom:12px}.section-heading p{max-width:700px;margin:0 auto}
+.intro{background:var(--white)}.intro-text{max-width:800px;margin:0 auto;text-align:center;font-size:1.1rem}
+.learn-section{background:var(--light-green)}.learn-list{max-width:850px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:16px 28px;list-style:none}.learn-list li{position:relative;padding:15px 18px 15px 48px;background:var(--white);border-radius:10px}.learn-list li:before{content:"✓";position:absolute;left:18px;top:13px;color:var(--green);font-weight:800;font-size:1.15rem}
+.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.topic-card{background:var(--white);padding:28px;border-radius:14px;border:1px solid #e5e9e2;box-shadow:0 4px 14px rgba(47,52,47,.05)}.topic-card h3{color:var(--forest);font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;margin-bottom:10px}.topic-card p{color:#505850}
+.details-box{max-width:850px;margin:0 auto;background:var(--forest);color:var(--white);border-radius:18px;padding:38px;text-align:center}.details-box h2{font-family:Georgia,"Times New Roman",serif;font-size:2.2rem;margin-bottom:18px}.details{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}.detail{padding:18px;background:rgba(255,255,255,.1);border-radius:10px}.detail strong{display:block;color:var(--white);margin-bottom:4px}
+.cta{text-align:center;background:var(--tan);color:var(--white)}.cta h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4vw,3rem);margin-bottom:12px}.cta p{max-width:650px;margin:0 auto 28px}.button{display:inline-block;background:var(--white);color:var(--forest);padding:13px 26px;border-radius:30px;font-weight:700}.button:hover{background:var(--light-green)}
+footer{background:var(--forest);color:var(--white);text-align:center;padding:35px 5%}footer p{margin:4px 0;opacity:.9}
+@media(max-width:850px){.nav-bar{flex-direction:column;gap:12px}nav{flex-wrap:wrap;justify-content:center;gap:14px 18px}.dropdown-content{position:static;box-shadow:none;border-top:1px solid #eee}.topic-grid,.learn-list,.details{grid-template-columns:1fr}.course-hero{min-height:380px}}
+@media(max-width:550px){.nav-logo img{width:130px}nav{font-size:.88rem}.section{padding:55px 5%}.details-box{padding:28px 20px}}
+</style>
+</head>
+<body>
+
+<header class="nav-bar">
+<a href="./index.html" class="nav-logo"><img src="./hazel-tails-logo.png" alt="Hazel Tails Dog Training"></a>
+<nav>
+<a href="./index.html">Home</a>
+<a href="./about.html">About</a>
+<div class="dropdown">
+<button class="dropbtn">Our Training ▾</button>
+<div class="dropdown-content">
+<a href="./private-classes.html">Private Classes</a>
+<a href="./group-classes.html">Group Classes</a>
+<a href="./training-courses.html">Training Courses</a>
+</div>
+</div>
+<a href="./reviews.html">Reviews</a>
+<div class="dropdown">
+<button class="dropbtn">Contact Ella ▾</button>
+<div class="dropdown-content"><a href="./book-consultation.html">Book a Consultation</a></div>
+</div>
+<a href="https://www.instagram.com/hazeltailsdogtraining" target="_blank" rel="noopener noreferrer" class="instagram-nav">Instagram ↗</a>
+</nav>
+</header>
+
+<section class="course-hero">
+<div class="course-hero-content">
+<h1>Small steps. Big adventures.</h1>
+<p>Give your puppy the foundations they need to grow into a confident, connected and capable dog.</p>
+<span class="age-badge">For puppies aged 3–5 months</span>
+</div>
+</section>
+
+<section class="section intro">
+<div class="section-inner">
+<div class="section-heading"><h2>Start your puppy's journey the right way</h2></div>
+<p class="intro-text">Puppyhood is a time of enormous learning. This course gives you the knowledge and practical skills to understand how your puppy learns, build great habits and make training part of everyday life. We focus on positive, practical training that helps puppies and their people learn together.</p>
+</div>
+</section>
+
+<section class="section learn-section">
+<div class="section-inner">
+<div class="section-heading"><h2>What you'll learn</h2><p>We combine explanation, practical training and real-life distractions so that you understand not just what to teach, but how and why it works.</p></div>
+<ul class="learn-list">
+<li>Luring, shaping and capturing behaviours</li>
+<li>How dogs learn and the mechanics of teaching behaviours</li>
+<li>Motivation and troubleshooting during training</li>
+<li>Leash manners and everyday life skills</li>
+<li>Basic obedience foundations</li>
+<li>Training around everyday distractions</li>
+<li>Positive socialisation opportunities</li>
+<li>Recall and introductory nose work</li>
+<li>Handling and confidence-building exercises</li>
+<li>Building attention and engagement with you</li>
+</ul>
+</div>
+</section>
+
+<section class="section">
+<div class="section-inner">
+<div class="section-heading"><h2>More than just puppy training</h2><p>The goal isn't a puppy who can perform a list of behaviours. It's a puppy who can learn, communicate and feel confident as they discover the world with you.</p></div>
+<div class="topic-grid">
+<article class="topic-card"><h3>Confidence</h3><p>Help your puppy develop positive experiences with handling, learning and the world around them.</p></article>
+<article class="topic-card"><h3>Connection</h3><p>Build attention, engagement and cooperation so that your puppy learns that working with you is rewarding.</p></article>
+<article class="topic-card"><h3>Real-life skills</h3><p>Practise useful foundations such as walking nicely on lead, recall and coping with everyday distractions.</p></article>
+<article class="topic-card"><h3>Understanding</h3><p>Learn to recognise how your puppy learns and how to adjust your training when something isn't working.</p></article>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-inner">
+<div class="details-box">
+<h2>The Puppy Course</h2>
+<p>A five-week programme designed to give you and your puppy practical foundations for everyday life.</p>
+<div class="details">
+<div class="detail"><strong>Age</strong>3–5 months</div>
+<div class="detail"><strong>Duration</strong>5 weeks</div>
+<div class="detail"><strong>Approach</strong>Positive &amp; practical</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section cta">
+<div class="section-inner">
+<h2>Ready to get started?</h2>
+<p>If you're looking for a positive way to help your puppy learn and grow, I'd love to hear about them. Get in touch to find out about upcoming courses and whether this is the right fit for you.</p>
+<a href="./book-consultation.html" class="button">Book a Consultation</a>
+</div>
+</section>
+
+<footer>
+<p><strong>Hazel Tails Dog Training</strong></p>
+<p>Positive Training for Every Dog.</p>
+<p>CONFIDENCE · CONNECTION · REAL LIFE SKILLS</p>
+</footer>
+
+</body>
+</html>
