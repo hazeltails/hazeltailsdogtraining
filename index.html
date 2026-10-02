@@ -1,1068 +1,285 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+---
+layout: default
+title: Hazel Tails Dog Training
+description: Hazel Tails Dog Training offers positive, science-based dog training tailored to every dog and their family.
+---
 
-  <title>Hazel Tails Dog Training | Positive Training for Every Dog</title>
+<section class="hero">
+  <div class="hero-image">
+    <img
+      src="{{ '/hazel-tails-banner.png' | relative_url }}"
+      alt="Hazel Tails Dog Training - Positive Training for Every Dog"
+    >
+  </div>
+</section>
 
-  <meta
-    name="description"
-    content="Hazel Tails Dog Training offers positive, science-based dog training tailored to every dog and their family."
+
+<section class="intro-section">
+
+  <div class="eyebrow">
+    Hazel Tails Dog Training
+  </div>
+
+  <h1>
+    Positive Training for Every Dog.
+  </h1>
+
+  <p class="tagline">
+    Building confidence, connection and real-life skills.
+  </p>
+
+  <p class="intro-text">
+    Every dog is different, and your training should be too.
+    Hazel Tails provides kind, science-based dog training tailored
+    to your dog's individual needs, helping you build a stronger
+    relationship and enjoy everyday life together.
+  </p>
+
+  <a
+    href="{{ '/book-consultation.html' | relative_url }}"
+    class="button"
   >
+    Book a Consultation
+  </a>
 
-  <style>
-    /* =========================
-       COLOUR PALETTE
-       ========================= */
+</section>
 
-    :root {
-      --forest: #294d38;
-      --green: #4b7b55;
-      --sage: #8da58c;
-      --cream: #faf8f2;
-      --light-green: #eef3ec;
-      --tan: #b18b58;
-      --dark: #2f342f;
-      --white: #ffffff;
-    }
 
+<section class="training-section">
 
-    /* =========================
-       GENERAL
-       ========================= */
+  <div class="section-heading">
 
-    * {
-      box-sizing: border-box;
-    }
+    <div class="eyebrow">
+      Training for every stage
+    </div>
 
-    html {
-      scroll-behavior: smooth;
-    }
+    <h2>
+      Where would you like to start?
+    </h2>
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--dark);
-      line-height: 1.7;
-    }
+    <p>
+      Whether you have just brought home a puppy or are looking
+      for support with an adolescent or adult dog, training can
+      help you understand each other and thrive together.
+    </p>
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+  </div>
 
-    a {
-      color: inherit;
-    }
 
+  <div class="training-grid">
 
-    /* =========================
-       NAVIGATION
-       ========================= */
+    <article class="training-card">
 
-    .nav-bar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      padding: 10px 5%;
-
-      background: rgba(250, 248, 242, 0.97);
-      border-bottom: 1px solid #dfe6dc;
-
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-    }
-
-    .nav-logo {
-      height: 58px;
-      width: auto;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    nav a,
-    .dropbtn {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--dark);
-      text-decoration: none;
-
-      background: none;
-      border: none;
-      cursor: pointer;
-
-      padding: 8px 0;
-    }
-
-    nav a:hover,
-    .dropbtn:hover {
-      color: var(--green);
-    }
-
-
-    /* =========================
-       DROPDOWNS
-       ========================= */
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content {
-      display: none;
-
-      position: absolute;
-      top: 100%;
-      left: -10px;
-
-      min-width: 210px;
-
-      background: var(--white);
-      border: 1px solid #e1e7df;
-      border-radius: 8px;
-
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-
-      overflow: hidden;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 12px 16px;
-    }
-
-    .dropdown-content a:hover {
-      background: var(--light-green);
-    }
-
-    .dropdown:hover .dropdown-content,
-    .dropdown:focus-within .dropdown-content {
-      display: block;
-    }
-
-
-    /* =========================
-       HERO BANNER
-       ========================= */
-
-    .hero {
-      padding: 30px 4% 20px;
-      background: var(--cream);
-    }
-
-    .hero-image {
-      width: 100%;
-      max-width: 1500px;
-      margin: 0 auto;
-
-      border-radius: 18px;
-      overflow: hidden;
-
-      box-shadow: 0 8px 30px rgba(45, 65, 48, 0.12);
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: auto;
-    }
-
-
-    /* =========================
-       INTRODUCTION
-       ========================= */
-
-    .intro-section {
-      text-align: center;
-      padding: 70px 20px 80px;
-
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .eyebrow {
-      color: var(--green);
-
-      text-transform: uppercase;
-      letter-spacing: 3px;
-
-      font-size: 13px;
-      font-weight: 700;
-
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      margin: 0 0 15px;
-
-      color: var(--forest);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(32px, 5vw, 52px);
-      line-height: 1.15;
-    }
-
-    .tagline {
-      font-size: 21px;
-      color: var(--green);
-      font-weight: 600;
-
-      margin: 0 auto 25px;
-    }
-
-    .intro-text {
-      max-width: 760px;
-      margin: 0 auto;
-
-      font-size: 17px;
-      color: #555b55;
-    }
-
-
-    /* =========================
-       BUTTONS
-       ========================= */
-
-    .button {
-      display: inline-block;
-
-      margin-top: 25px;
-      padding: 13px 26px;
-
-      background: var(--forest);
-      color: var(--white);
-
-      border-radius: 30px;
-
-      text-decoration: none;
-      font-weight: 700;
-
-      transition: 0.2s ease;
-    }
-
-    .button:hover {
-      background: var(--green);
-      transform: translateY(-1px);
-    }
-
-    .button.secondary {
-      background: transparent;
-      color: var(--forest);
-
-      border: 2px solid var(--forest);
-    }
-
-    .button.secondary:hover {
-      background: var(--forest);
-      color: var(--white);
-    }
-
-
-    /* =========================
-       TRAINING SECTION
-       ========================= */
-
-    .training-section {
-      padding: 80px 5%;
-
-      background: var(--light-green);
-
-      text-align: center;
-    }
-
-    .section-heading {
-      max-width: 750px;
-      margin: 0 auto 45px;
-    }
-
-    h2 {
-      color: var(--forest);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(30px, 4vw, 42px);
-
-      margin: 0 0 12px;
-    }
-
-    .section-heading p {
-      color: #5a625a;
-      font-size: 17px;
-    }
-
-    .training-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 25px;
-    }
-
-    .training-card {
-      background: var(--white);
-
-      padding: 35px 25px;
-
-      border-radius: 14px;
-
-      box-shadow: 0 5px 20px rgba(45, 65, 48, 0.07);
-    }
-
-    .training-card h3 {
-      margin-top: 0;
-
-      color: var(--forest);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 25px;
-    }
-
-    .training-card p {
-      color: #5b605b;
-    }
-
-    .training-card .highlight {
-      color: var(--green);
-      font-weight: 700;
-    }
-
-
-    /* =========================
-       PACKAGES
-       ========================= */
-
-    .packages-section {
-      padding: 80px 5%;
-
-      text-align: center;
-
-      background: var(--cream);
-    }
-
-    .package-box {
-      max-width: 850px;
-      margin: 40px auto 0;
-
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 25px;
-    }
-
-    .package {
-      background: var(--white);
-
-      border: 1px solid #e0e6de;
-      border-radius: 14px;
-
-      padding: 35px 25px;
-
-      box-shadow: 0 5px 20px rgba(45, 65, 48, 0.06);
-    }
-
-    .package h3 {
-      margin: 0 0 10px;
-
-      color: var(--forest);
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 25px;
-    }
-
-    .price {
-      font-size: 34px;
-      font-weight: 700;
-
-      color: var(--green);
-
-      margin: 10px 0;
-    }
-
-    .package-description {
-      color: #666;
-      margin-bottom: 0;
-    }
-
-    .free-session {
-      display: inline-block;
-
-      margin-top: 12px;
-      padding: 5px 12px;
-
-      background: #edf4eb;
-      color: var(--green);
-
-      border-radius: 20px;
-
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-
-    /* =========================
-       PHILOSOPHY
-       ========================= */
-
-    .philosophy-section {
-      padding: 80px 20px;
-
-      background: var(--forest);
-      color: var(--white);
-
-      text-align: center;
-    }
-
-    .philosophy-section h2 {
-      color: var(--white);
-    }
-
-    .philosophy-text {
-      max-width: 750px;
-
-      margin: 20px auto 35px;
-
-      font-size: 18px;
-
-      color: #e5ece5;
-    }
-
-    .values {
-      display: flex;
-
-      justify-content: center;
-
-      flex-wrap: wrap;
-
-      gap: 15px 35px;
-
-      margin-top: 30px;
-
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .values span::after {
-      content: "•";
-
-      margin-left: 35px;
-
-      color: var(--tan);
-    }
-
-    .values span:last-child::after {
-      content: "";
-      margin: 0;
-    }
-
-
-    /* =========================
-       CALL TO ACTION
-       ========================= */
-
-    .cta-section {
-      padding: 80px 20px;
-
-      text-align: center;
-
-      background: var(--cream);
-    }
-
-    .cta-section p {
-      max-width: 700px;
-
-      margin: 15px auto;
-
-      color: #5a605a;
-
-      font-size: 17px;
-    }
-
-
-    /* =========================
-       FOOTER
-       ========================= */
-
-    footer {
-      padding: 45px 20px;
-
-      background: #e8eee6;
-
-      text-align: center;
-
-      color: #555c55;
-    }
-
-    footer img {
-      height: 65px;
-      width: auto;
-
-      margin: 0 auto 15px;
-    }
-
-    footer p {
-      margin: 5px 0;
-
-      font-size: 14px;
-    }
-
-    .instagram {
-      color: var(--green);
-
-      font-weight: 700;
-
-      text-decoration: none;
-    }
-
-    .instagram:hover {
-      text-decoration: underline;
-    }
-
-
-    /* =========================
-       MOBILE
-       ========================= */
-
-    @media (max-width: 800px) {
-
-      .nav-bar {
-        flex-direction: column;
-
-        gap: 5px;
-
-        padding: 10px 15px;
-      }
-
-      .nav-logo {
-        height: 50px;
-      }
-
-      nav {
-        width: 100%;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 8px 18px;
-      }
-
-      nav a,
-      .dropbtn {
-        font-size: 14px;
-      }
-
-      .dropdown-content {
-        position: absolute;
-
-        left: 50%;
-
-        transform: translateX(-50%);
-      }
-
-      .hero {
-        padding: 15px 10px;
-      }
-
-      .hero-image {
-        border-radius: 10px;
-      }
-
-      .intro-section {
-        padding: 55px 20px 60px;
-      }
-
-      .training-grid {
-        grid-template-columns: 1fr;
-
-        max-width: 500px;
-      }
-
-      .package-box {
-        grid-template-columns: 1fr;
-
-        max-width: 500px;
-      }
-
-      .values {
-        flex-direction: column;
-
-        gap: 10px;
-      }
-
-      .values span::after {
-        display: none;
-      }
-    }
-
-
-    @media (max-width: 480px) {
-
-      nav {
-        gap: 5px 12px;
-      }
-
-      .hero {
-        padding-top: 10px;
-      }
-
-      .tagline {
-        font-size: 18px;
-      }
-
-      .intro-text {
-        font-size: 16px;
-      }
-    }
-
-  </style>
-</head>
-
-
-<body>
-
-
-  <!-- =========================
-       NAVIGATION
-       ========================= -->
-
-  <header class="nav-bar">
-
-    <a href="./index.html" aria-label="Hazel Tails Dog Training home">
-
-      <img
-        src="./hazel-tails-logo.png"
-        alt="Hazel Tails Dog Training"
-        class="nav-logo"
-      >
-
-    </a>
-
-
-    <nav aria-label="Main navigation">
-
-      <a href="./index.html">Home</a>
-
-      <a href="./about.html">About</a>
-
-
-      <div class="dropdown">
-
-        <button class="dropbtn" type="button">
-          Our Training ▾
-        </button>
-
-        <div class="dropdown-content">
-
-          <a href="./private-classes.html">
-            Private Classes
-          </a>
-
-          <a href="./group-classes.html">
-            Group Classes
-          </a>
-
-          <a href="./training-courses.html">
-            Training Courses
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <a href="./reviews.html">
-        Reviews
-      </a>
-
-
-      <div class="dropdown">
-
-        <button class="dropbtn" type="button">
-          Contact Ella ▾
-        </button>
-
-        <div class="dropdown-content">
-
-          <a href="./book-consultation.html">
-            Book a Consultation
-          </a>
-
-        </div>
-
-      </div>
-
-    </nav>
-
-  </header>
-
-
-  <!-- =========================
-       HERO BANNER
-       ========================= -->
-
-  <main>
-
-    <section class="hero">
-
-      <div class="hero-image">
-
-        <img
-          src="./hazel-tails-banner.png"
-          alt="Hazel Tails Dog Training - Positive Training for Every Dog"
-        >
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         INTRODUCTION
-         ========================= -->
-
-    <section class="intro-section">
-
-      <div class="eyebrow">
-        Hazel Tails Dog Training
-      </div>
-
-      <h1>
-        Positive Training for Every Dog.
-      </h1>
-
-      <p class="tagline">
-        Building confidence, connection and real-life skills.
-      </p>
-
-      <p class="intro-text">
-        Every dog is different, and your training should be too.
-        Hazel Tails provides kind, science-based dog training tailored
-        to your dog's individual needs, helping you build a stronger
-        relationship and enjoy everyday life together.
-      </p>
-
-      <a
-        href="./book-consultation.html"
-        class="button"
-      >
-        Book a Consultation
-      </a>
-
-    </section>
-
-
-    <!-- =========================
-         TRAINING
-         ========================= -->
-
-    <section class="training-section">
-
-      <div class="section-heading">
-
-        <div class="eyebrow">
-          Training for every stage
-        </div>
-
-        <h2>
-          Where would you like to start?
-        </h2>
-
-        <p>
-          Whether you have just brought home a puppy or are looking
-          for support with an adolescent or adult dog, training can
-          help you understand each other and thrive together.
-        </p>
-
-      </div>
-
-
-      <div class="training-grid">
-
-
-        <article class="training-card">
-
-          <h3>
-            Puppy Training
-          </h3>
-
-          <p>
-            Build a strong foundation from the very beginning.
-            Learn how to support your puppy as they discover the world,
-            develop confidence and learn essential life skills.
-          </p>
-
-          <p class="highlight">
-            Small steps. Big adventures.
-          </p>
-
-          <a
-            href="./private-classes.html"
-            class="button secondary"
-          >
-            Learn More
-          </a>
-
-        </article>
-
-
-        <article class="training-card">
-
-          <h3>
-            Adolescent Training
-          </h3>
-
-          <p>
-            Teenage dogs can be challenging, exciting and full of energy.
-            Learn how to work with your adolescent dog and channel their
-            energy into amazing things.
-          </p>
-
-          <p class="highlight">
-            Channel their energy into amazing things.
-          </p>
-
-          <a
-            href="./private-classes.html"
-            class="button secondary"
-          >
-            Learn More
-          </a>
-
-        </article>
-
-
-        <article class="training-card">
-
-          <h3>
-            Adult Dog Training
-          </h3>
-
-          <p>
-            It's never too late to learn. Work on everyday behaviours,
-            confidence, communication and practical skills that make
-            life together easier and more enjoyable.
-          </p>
-
-          <p class="highlight">
-            Real progress. At any age.
-          </p>
-
-          <a
-            href="./private-classes.html"
-            class="button secondary"
-          >
-            Learn More
-          </a>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         PACKAGES
-         ========================= -->
-
-    <section class="packages-section">
-
-      <div class="section-heading">
-
-        <div class="eyebrow">
-          Private Training
-        </div>
-
-        <h2>
-          Training Packages
-        </h2>
-
-        <p>
-          Personalised one-to-one training designed around you,
-          your dog and your goals.
-        </p>
-
-      </div>
-
-
-      <div class="package-box">
-
-
-        <article class="package">
-
-          <h3>
-            5 Sessions
-          </h3>
-
-          <div class="price">
-            €300
-          </div>
-
-          <p class="package-description">
-            Five personalised one-hour training sessions.
-          </p>
-
-        </article>
-
-
-        <article class="package">
-
-          <h3>
-            10 Sessions
-          </h3>
-
-          <div class="price">
-            €540
-          </div>
-
-          <span class="free-session">
-            1 session free
-          </span>
-
-          <p class="package-description">
-            Ten personalised one-hour training sessions,
-            giving you more time to work towards lasting change.
-          </p>
-
-        </article>
-
-
-      </div>
-
-
-      <a
-        href="./book-consultation.html"
-        class="button"
-      >
-        Book a Consultation
-      </a>
-
-    </section>
-
-
-    <!-- =========================
-         TRAINING PHILOSOPHY
-         ========================= -->
-
-    <section class="philosophy-section">
-
-      <div class="eyebrow">
-        The Hazel Tails Approach
-      </div>
-
-      <h2>
-        Training built around your dog.
-      </h2>
-
-      <p class="philosophy-text">
-        Positive reinforcement training isn't about ignoring unwanted
-        behaviour or letting dogs do whatever they want. It's about
-        understanding why behaviour happens, teaching useful alternatives
-        and helping dogs develop the skills they need to succeed.
-      </p>
-
-
-      <div class="values">
-
-        <span>
-          Confidence
-        </span>
-
-        <span>
-          Connection
-        </span>
-
-        <span>
-          Real Life Skills
-        </span>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         CALL TO ACTION
-         ========================= -->
-
-    <section class="cta-section">
-
-      <div class="eyebrow">
-        Ready to get started?
-      </div>
-
-      <h2>
-        Let's work together.
-      </h2>
+      <h3>
+        Puppy Training
+      </h3>
 
       <p>
-        Tell me a little about you and your dog, what you're finding
-        challenging and what you'd like to achieve.
+        Build a strong foundation from the very beginning.
+        Learn how to support your puppy as they discover the world,
+        develop confidence and learn essential life skills.
+      </p>
+
+      <p class="highlight">
+        Small steps. Big adventures.
       </p>
 
       <a
-        href="./book-consultation.html"
-        class="button"
+        href="{{ '/private-classes.html' | relative_url }}"
+        class="button secondary"
       >
-        Book a Consultation
+        Learn More
       </a>
 
-    </section>
-
-  </main>
+    </article>
 
 
-  <!-- =========================
-       FOOTER
-       ========================= -->
+    <article class="training-card">
 
-  <footer>
+      <h3>
+        Adolescent Training
+      </h3>
 
-    <img
-      src="./hazel-tails-logo.png"
-      alt="Hazel Tails Dog Training"
-    >
+      <p>
+        Teenage dogs can be challenging, exciting and full of energy.
+        Learn how to work with your adolescent dog and channel their
+        energy into amazing things.
+      </p>
 
-    <p>
-      Positive Training for Every Dog.
-    </p>
-
-    <p>
+      <p class="highlight">
+        Channel their energy into amazing things.
+      </p>
 
       <a
-        href="https://www.instagram.com/hazeltailsdogtraining"
-        class="instagram"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="{{ '/private-classes.html' | relative_url }}"
+        class="button secondary"
       >
-        @hazeltailsdogtraining
+        Learn More
       </a>
 
-    </p>
+    </article>
+
+
+    <article class="training-card">
+
+      <h3>
+        Adult Dog Training
+      </h3>
+
+      <p>
+        It's never too late to learn. Work on everyday behaviours,
+        confidence, communication and practical skills that make
+        life together easier and more enjoyable.
+      </p>
+
+      <p class="highlight">
+        Real progress. At any age.
+      </p>
+
+      <a
+        href="{{ '/private-classes.html' | relative_url }}"
+        class="button secondary"
+      >
+        Learn More
+      </a>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="packages-section">
+
+  <div class="section-heading">
+
+    <div class="eyebrow">
+      Private Training
+    </div>
+
+    <h2>
+      Training Packages
+    </h2>
 
     <p>
-      © 2026 Hazel Tails Dog Training
+      Personalised one-to-one training designed around you,
+      your dog and your goals.
     </p>
 
-  </footer>
+  </div>
 
 
-</body>
-</html>
+  <div class="package-box">
+
+    <article class="package">
+
+      <h3>
+        5 Sessions
+      </h3>
+
+      <div class="price">
+        €300
+      </div>
+
+      <p class="package-description">
+        Five personalised one-hour training sessions.
+      </p>
+
+    </article>
+
+
+    <article class="package">
+
+      <h3>
+        10 Sessions
+      </h3>
+
+      <div class="price">
+        €540
+      </div>
+
+      <span class="free-session">
+        1 session free
+      </span>
+
+      <p class="package-description">
+        Ten personalised one-hour training sessions,
+        giving you more time to work towards lasting change.
+      </p>
+
+    </article>
+
+  </div>
+
+
+  <a
+    href="{{ '/book-consultation.html' | relative_url }}"
+    class="button"
+  >
+    Book a Consultation
+  </a>
+
+</section>
+
+
+<section class="philosophy-section">
+
+  <div class="eyebrow">
+    The Hazel Tails Approach
+  </div>
+
+  <h2>
+    Training built around your dog.
+  </h2>
+
+  <p class="philosophy-text">
+    Positive reinforcement training isn't about ignoring unwanted
+    behaviour or letting dogs do whatever they want. It's about
+    understanding why behaviour happens, teaching useful alternatives
+    and helping dogs develop the skills they need to succeed.
+  </p>
+
+
+  <div class="values">
+
+    <span>
+      Confidence
+    </span>
+
+    <span>
+      Connection
+    </span>
+
+    <span>
+      Real Life Skills
+    </span>
+
+  </div>
+
+</section>
+
+
+<section class="cta-section">
+
+  <div class="eyebrow">
+    Ready to get started?
+  </div>
+
+  <h2>
+    Let's work together.
+  </h2>
+
+  <p>
+    Tell me a little about you and your dog, what you're finding
+    challenging and what you'd like to achieve.
+  </p>
+
+  <a
+    href="{{ '/book-consultation.html' | relative_url }}"
+    class="button"
+  >
+    Book a Consultation
+  </a>
+
+</section>
