@@ -800,3 +800,92 @@ a:hover {
   }
 
 }
+
+/* =========================================
+   CONTACT OPTIONS
+   ========================================= */
+
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.contact-option {
+  padding: 30px;
+  background: var(--white);
+  border: 1px solid rgba(41, 77, 56, 0.1);
+  border-radius: 18px;
+}
+
+.contact-option h3 {
+  margin: 0 0 12px;
+  color: var(--forest);
+  font-size: 1.35rem;
+}
+
+.contact-option p {
+  margin: 0 0 20px;
+  color: var(--dark);
+  line-height: 1.65;
+}
+
+.contact-email {
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.contact-email:hover {
+  color: var(--forest);
+  text-decoration: underline;
+}
+
+
+/* Instagram */
+
+.instagram-contact {
+  background: var(--light-green);
+}
+
+.instagram-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--forest);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.instagram-contact-link:hover {
+  color: var(--green);
+}
+
+.instagram-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.instagram-arrow {
+  font-size: 1rem;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .contact-options {
+    grid-template-columns: 1fr;
+  }
+
+}
