@@ -626,3 +626,177 @@ a:hover {
     padding: 55px 20px;
   }
 }
+/* =========================================
+   SERVICES OVERVIEW
+   ========================================= */
+
+.services-overview {
+  padding: 90px 24px;
+  background: var(--cream);
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section heading */
+
+.services-overview .section-heading {
+  max-width: 760px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.services-overview .eyebrow {
+  margin-bottom: 10px;
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.services-overview .section-heading h2 {
+  margin: 0 0 18px;
+  color: var(--forest);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.services-overview .section-heading p:last-child {
+  margin: 0;
+  color: var(--dark);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* Services grid */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+
+/* Individual service cards */
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
+  background: var(--white);
+  border: 1px solid rgba(41, 77, 56, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(41, 77, 56, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(41, 77, 56, 0.1);
+}
+
+
+/* Icons */
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 22px;
+  background: var(--light-green);
+  border-radius: 50%;
+  font-size: 1.6rem;
+}
+
+
+/* Card text */
+
+.service-card h3 {
+  margin: 0 0 12px;
+  color: var(--forest);
+  font-size: 1.45rem;
+}
+
+.service-card p {
+  margin: 0 0 24px;
+  color: var(--dark);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+
+/* Card links */
+
+.service-link {
+  margin-top: auto;
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.service-link:hover {
+  color: var(--forest);
+  text-decoration: underline;
+}
+
+
+/* Bottom CTA */
+
+.services-cta {
+  margin-top: 55px;
+  padding: 42px 30px;
+  background: var(--light-green);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.services-cta h3 {
+  margin: 0 0 10px;
+  color: var(--forest);
+  font-size: 1.6rem;
+}
+
+.services-cta p {
+  margin: 0 0 24px;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   SERVICES RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .services-overview {
+    padding: 70px 18px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-card {
+    padding: 28px;
+  }
+
+  .services-overview .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .services-cta {
+    margin-top: 35px;
+    padding: 34px 22px;
+  }
+
+}
