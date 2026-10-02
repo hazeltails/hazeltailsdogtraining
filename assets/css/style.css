@@ -231,3 +231,322 @@ a:hover {
     padding: 35px 20px;
   }
 }
+
+/* =========================================
+   HOME PAGE
+   ========================================= */
+
+.hero {
+  padding: 30px 4% 20px;
+  background: var(--cream);
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(45, 65, 48, 0.12);
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* INTRO */
+
+.intro-section {
+  text-align: center;
+  padding: 70px 20px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.intro-section h1 {
+  margin: 0 0 15px;
+  color: var(--forest);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.15;
+}
+
+.tagline {
+  font-size: 21px;
+  color: var(--green);
+  font-weight: 600;
+  margin: 0 auto 25px;
+}
+
+.intro-text {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 17px;
+  color: #555b55;
+}
+
+
+/* BUTTONS */
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 13px 26px;
+  background: var(--forest);
+  color: var(--white);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  background: var(--green);
+  transform: translateY(-1px);
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--forest);
+  border: 2px solid var(--forest);
+}
+
+.button.secondary:hover {
+  background: var(--forest);
+  color: var(--white);
+}
+
+
+/* TRAINING */
+
+.training-section {
+  padding: 80px 5%;
+  background: var(--light-green);
+  text-align: center;
+}
+
+.section-heading {
+  max-width: 750px;
+  margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+  color: var(--forest);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 42px);
+  margin: 0 0 12px;
+}
+
+.section-heading p {
+  color: #5a625a;
+  font-size: 17px;
+}
+
+.training-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.training-card {
+  background: var(--white);
+  padding: 35px 25px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(45, 65, 48, 0.07);
+}
+
+.training-card h3 {
+  margin-top: 0;
+  color: var(--forest);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+}
+
+.training-card p {
+  color: #5b605b;
+}
+
+.training-card .highlight {
+  color: var(--green);
+  font-weight: 700;
+}
+
+
+/* PACKAGES */
+
+.packages-section {
+  padding: 80px 5%;
+  text-align: center;
+  background: var(--cream);
+}
+
+.package-box {
+  max-width: 850px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.package {
+  background: var(--white);
+  border: 1px solid #e0e6de;
+  border-radius: 14px;
+  padding: 35px 25px;
+  box-shadow: 0 5px 20px rgba(45, 65, 48, 0.06);
+}
+
+.package h3 {
+  margin: 0 0 10px;
+  color: var(--forest);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+}
+
+.price {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--green);
+  margin: 10px 0;
+}
+
+.package-description {
+  color: #666;
+  margin-bottom: 0;
+}
+
+.free-session {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 12px;
+  background: #edf4eb;
+  color: var(--green);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* PHILOSOPHY */
+
+.philosophy-section {
+  padding: 80px 20px;
+  background: var(--forest);
+  color: var(--white);
+  text-align: center;
+}
+
+.philosophy-section h2 {
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+.philosophy-text {
+  max-width: 750px;
+  margin: 20px auto 35px;
+  font-size: 18px;
+  color: #e5ece5;
+}
+
+.values {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px 35px;
+  margin-top: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.values span::after {
+  content: "•";
+  margin-left: 35px;
+  color: var(--tan);
+}
+
+.values span:last-child::after {
+  content: "";
+  margin: 0;
+}
+
+
+/* HOME CTA */
+
+.cta-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: var(--cream);
+}
+
+.cta-section p {
+  max-width: 700px;
+  margin: 15px auto;
+  color: #5a605a;
+  font-size: 17px;
+}
+
+
+/* HOME MOBILE */
+
+@media (max-width: 800px) {
+
+  .hero {
+    padding: 15px 10px;
+  }
+
+  .hero-image {
+    border-radius: 10px;
+  }
+
+  .intro-section {
+    padding: 55px 20px 60px;
+  }
+
+  .training-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .package-box {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .values {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .values span::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding-top: 10px;
+  }
+
+  .tagline {
+    font-size: 18px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+  }
+}
