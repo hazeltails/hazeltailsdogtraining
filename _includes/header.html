@@ -1,16 +1,24 @@
 <header class="site-header">
   <div class="nav-container">
 
-    <a
-      class="brand"
-      href="{{ '/' | relative_url }}"
-      aria-label="Hazel Tails Dog Training home"
-    >
-      <img
-        src="{{ '/hazel-tails-logo.png' | relative_url }}"
-        alt="Hazel Tails Dog Training"
+    <div class="brand-area">
+
+      <a
+        class="brand"
+        href="{{ '/' | relative_url }}"
+        aria-label="Hazel Tails Dog Training home"
       >
-    </a>
+        <img
+          src="{{ '/hazel-tails-logo.png' | relative_url }}"
+          alt="Hazel Tails Dog Training"
+        >
+      </a>
+
+      <span class="location-tagline">
+        Dog Training in Castelldefels · Barcelona · Sitges
+      </span>
+
+    </div>
 
     <nav class="main-nav" aria-label="Main navigation">
 
@@ -44,10 +52,15 @@
         Reviews
       </a>
 
-      <a href="{{ '/book-consultation.html' | relative_url }}">
+      <details class="dropdown">
+        <summary>Contact Ella</summary>
+
+        <div class="dropdown-menu">
+          <a href="{{ '/book-consultation.html' | relative_url }}">
             Book a Consultation
           </a>
-      
+        </div>
+      </details>
 
       <a
         href="https://www.instagram.com/hazeltailsdogtraining"
