@@ -9,148 +9,6 @@ description: Meet Ella and learn about Hazel Tails Dog Training.
      ABOUT PAGE STYLES
      ========================= */
 
-  :root {
-    --forest: #294d38;
-    --green: #4b7b55;
-    --sage: #8da58c;
-    --cream: #faf8f2;
-    --light-green: #eef3ec;
-    --tan: #b18b58;
-    --dark: #2f342f;
-    --white: #ffffff;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--cream);
-    color: var(--dark);
-    line-height: 1.7;
-  }
-
-  img {
-    max-width: 100%;
-    display: block;
-  }
-
-  a {
-    color: inherit;
-  }
-
-
-  /* =========================
-     SHARED HEADER
-     ========================= */
-
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(250, 248, 242, 0.97);
-    border-bottom: 1px solid #dfe6dc;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-  }
-
-  .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 5%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-  }
-
-  .brand img {
-    height: 58px;
-    width: auto;
-  }
-
-  .main-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-  }
-
-  .main-nav a,
-  .dropdown summary {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--dark);
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .main-nav a:hover,
-  .dropdown summary:hover {
-    color: var(--green);
-  }
-
-  .dropdown {
-    position: relative;
-  }
-
-  .dropdown summary {
-    list-style: none;
-    padding: 8px 0;
-  }
-
-  .dropdown summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .dropdown summary::after {
-    content: " ▾";
-  }
-
-  .dropdown-menu {
-    position: absolute;
-    top: calc(100% + 5px);
-    left: -10px;
-
-    min-width: 220px;
-
-    background: var(--white);
-    border: 1px solid #e1e7df;
-    border-radius: 8px;
-
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-
-    overflow: hidden;
-  }
-
-  .dropdown:not([open]) .dropdown-menu {
-    display: none;
-  }
-
-  .dropdown-menu a {
-    display: block;
-    padding: 12px 16px;
-  }
-
-  .dropdown-menu a:hover {
-    background: var(--light-green);
-  }
-
-  .instagram-nav {
-    color: var(--green) !important;
-    font-weight: 700 !important;
-  }
-
-  .instagram-nav:hover {
-    color: var(--tan) !important;
-  }
-
-
   /* =========================
      PAGE HERO
      ========================= */
@@ -423,66 +281,10 @@ description: Meet Ella and learn about Hazel Tails Dog Training.
 
 
   /* =========================
-     SHARED FOOTER
-     ========================= */
-
-  .site-footer {
-    padding: 45px 20px;
-
-    background: #e8eee6;
-
-    text-align: center;
-    color: #555c55;
-  }
-
-  .footer-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .footer-brand {
-    margin: 0 0 12px;
-    font-size: 15px;
-  }
-
-  .footer-copy {
-    margin: 5px 0;
-    font-size: 14px;
-  }
-
-
-  /* =========================
-     MOBILE
+     MOBILE — ABOUT PAGE
      ========================= */
 
   @media (max-width: 800px) {
-
-    .nav-container {
-      flex-direction: column;
-      gap: 5px;
-      padding: 10px 15px;
-    }
-
-    .brand img {
-      height: 50px;
-    }
-
-    .main-nav {
-      width: 100%;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px 18px;
-    }
-
-    .main-nav a,
-    .dropdown summary {
-      font-size: 14px;
-    }
-
-    .dropdown-menu {
-      left: 50%;
-      transform: translateX(-50%);
-    }
 
     .about-container {
       grid-template-columns: 1fr;
@@ -507,10 +309,6 @@ description: Meet Ella and learn about Hazel Tails Dog Training.
 
   @media (max-width: 480px) {
 
-    .main-nav {
-      gap: 5px 12px;
-    }
-
     .page-hero {
       padding: 60px 20px 50px;
     }
@@ -531,7 +329,6 @@ description: Meet Ella and learn about Hazel Tails Dog Training.
     }
   }
 </style>
-
 
 <!-- =========================
      PAGE HERO
