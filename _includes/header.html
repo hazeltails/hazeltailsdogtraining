@@ -1,1 +1,63 @@
+<header class="site-header">
+  <div class="nav-container">
 
+    <a
+      class="brand"
+      href="{{ '/' | relative_url }}"
+      aria-label="Hazel Tails Dog Training home"
+    >
+      <img
+        src="{{ '/hazel-tails-logo.png' | relative_url }}"
+        alt="Hazel Tails Dog Training"
+      >
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+
+      <a href="{{ '/' | relative_url }}">Home</a>
+
+      <a href="{{ '/about.html' | relative_url }}">About</a>
+
+      <details class="dropdown">
+        <summary>Services</summary>
+
+        <div class="dropdown-menu">
+          <a href="{{ '/private-classes.html' | relative_url }}">
+            Private Classes
+          </a>
+
+          <a href="{{ '/group-classes.html' | relative_url }}">
+            Group Classes
+          </a>
+
+          <a href="{{ '/training-courses.html' | relative_url }}">
+            Training Courses
+          </a>
+
+          <a href="{{ '/dog-walking.html' | relative_url }}">
+            Dog Walking
+          </a>
+        </div>
+      </details>
+
+      <a href="{{ '/reviews.html' | relative_url }}">
+        Reviews
+      </a>
+
+      <a href="{{ '/book-consultation.html' | relative_url }}">
+            Book a Consultation
+          </a>
+      
+
+      <a
+        href="https://www.instagram.com/hazeltailsdogtraining"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="instagram-nav"
+      >
+        Instagram ↗
+      </a>
+
+    </nav>
+  </div>
+</header>
