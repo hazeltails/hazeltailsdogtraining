@@ -203,6 +203,59 @@ description: A positive puppy course for puppies aged 3–5 months, building con
   background: var(--light-green);
 }
 
+  
+.upcoming-section {
+  background: var(--white);
+}
+
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.upcoming-card {
+  background: var(--cream);
+  border-radius: 15px;
+  padding: 28px;
+  text-align: center;
+  border: 1px solid #e2e8e1;
+}
+
+.upcoming-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--forest);
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.upcoming-card p {
+  line-height: 1.6;
+}
+
+.upcoming-date {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.upcoming-button {
+  display: inline-block;
+  background: var(--forest);
+  color: var(--white);
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.upcoming-button:hover {
+  background: var(--green);
+}
+
+
 @media (max-width: 850px) {
   .topic-grid,
   .learn-list,
@@ -375,23 +428,83 @@ description: A positive puppy course for puppies aged 3–5 months, building con
   </div>
 </section>
 
-<section class="section cta">
+
+<section class="section upcoming-section">
   <div class="section-inner">
 
-    <h2>Ready to get started?</h2>
+    <div class="section-heading">
+      <h2>Upcoming Courses</h2>
+      <p>
+        Ready to start your puppies journey in the best possible way?
+        Take a look at our upcoming course dates.
+      </p>
+    </div>
 
-    <p>
-      If you're looking for a positive way to help your puppy learn and grow,
-      I'd love to hear about them. Get in touch to find out about upcoming
-      courses and whether this is the right fit for you.
-    </p>
+    <div class="upcoming-grid">
 
-    <a
-      href="{{ '/book-consultation.html' | relative_url }}"
-      class="button"
-    >
-      Book a Consultation
-    </a>
+      <!-- COURSE 1 -->
+      <article class="upcoming-card">
+        <h3>Puppy Course Castelldefels</h3>
+
+        <p class="upcoming-date">
+          Starting: Thursday 19th November 2026
+        </p>
+
+        <p>
+          The essential starting course for puppies, including the basic foundations for life and socialisation!
+        </p>
+  <p>Dates:</p>
+
+  <p>19 Nov 15:30 </p>
+
+  <p>26 Nov 15:30 </p>
+
+  <p>3 Dec 15:30 </p>
+
+  <p>10 Dec 15:30 </p>
+
+  <p>17 Dec 15:30  </p>
+        <p><strong>Location:</strong> Castelldefels</p>
+        <p><strong>Price:</strong> 120EUR</p>
+
+        <a href="https://www.greendogtraining.net/eventinformation-och-anm-lan/puppy-course-2-5-5m-castelldefels-1/form" class="upcoming-button">
+          Book Now
+        </a>
+      </article>
+
+      <!-- COURSE 2 -->
+      <article class="upcoming-card">
+        <h3>Puppy Course Sitges</h3>
+
+        <p class="upcoming-date">
+          Starting: Friday 20th November
+        </p>
+
+     <p>
+          The essential starting course for puppies, including the basic foundations for life and socialisation!
+        </p>
+  <p>Dates:</p>
+
+  <p>20 Nov 20:00 </p>
+
+  <p>27 Nov 20:00 </p>
+
+  <p>4 Dec 20:00 </p>
+
+  <p>11 Dec 20:00 </p>
+
+  <p>18 Dec 20:00  </p>
+
+        <p><strong>Location:</strong> Sitges, Carrer Ramon de Dalmases, 50, 08870 Sitges, Barcelona, Spain</p>
+        <p><strong>Price:</strong> 120EUR</p>
+
+        <a href="https://www.greendogtraining.net/eventinformation-och-anm-lan/puppy-course-2-5-5m-sitges-4/form" class="upcoming-button">
+          Book Now
+        </a>
+      </article>
+
+    </div>
 
   </div>
 </section>
+
