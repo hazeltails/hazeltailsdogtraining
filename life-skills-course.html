@@ -214,6 +214,58 @@ description: A five-week Life Skills Course for dogs aged 6 months and over. Bui
     object-fit: cover;
   }
 }
+  
+.upcoming-section {
+  background: var(--white);
+}
+
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.upcoming-card {
+  background: var(--cream);
+  border-radius: 15px;
+  padding: 28px;
+  text-align: center;
+  border: 1px solid #e2e8e1;
+}
+
+.upcoming-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--forest);
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.upcoming-card p {
+  line-height: 1.6;
+}
+
+.upcoming-date {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.upcoming-button {
+  display: inline-block;
+  background: var(--forest);
+  color: var(--white);
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.upcoming-button:hover {
+  background: var(--green);
+}
+
 
 @media (max-width: 550px) {
   .section {
@@ -398,22 +450,89 @@ description: A five-week Life Skills Course for dogs aged 6 months and over. Bui
   </div>
 </section>
 
-<section class="section cta">
+<section class="section upcoming-section">
   <div class="section-inner">
 
-    <h2>Ready to build skills for life?</h2>
+    <div class="section-heading">
+      <h2>Upcoming Courses</h2>
+      <p>
+        Ready to continue learning with your dog?
+        Take a look at our upcoming course dates.
+      </p>
+    </div>
 
-    <p>
-      If you're ready to keep learning with your dog, get in touch to find
-      out about upcoming Life Skills Courses.
-    </p>
+    <div class="upcoming-grid">
 
-    <a
-      href="{{ '/book-consultation.html' | relative_url }}"
-      class="button"
-    >
-      Book a Consultation
-    </a>
+      <!-- COURSE 1 -->
+      <article class="upcoming-card">
+        <h3>Life Skills Course</h3>
+
+        <p class="upcoming-date">
+            Starting: Saturday 14th November
+        </p>
+
+        <p>
+          Five weeks of practical training, confidence building
+          and fun for dogs aged 6 months and over.
+            <p>
+         Dates:</p>
+<p>
+14 Nov 10:00 </p>
+<p>
+21 Nov 10:00 </p>
+<p>
+28 Nov 10:00 </p>
+<p>
+5 Dec 10:00 </p>
+<p>
+12 Dec 10:00 
+        </p>
+        </p>
+
+        <p><strong>Location:</strong> Parc del Poblenou, Sant Martí, 08005 Barcelona, Spain</p>
+        <p><strong>Price:</strong> 120EUR</p>
+
+        <a href="https://www.greendogtraining.net/eventinformation-och-anm-lan/life-skill-course-barcelona-parc-del-poblenou/form" class="upcoming-button">
+          Book Now
+        </a>
+      </article>
+
+      <!-- COURSE 2 -->
+      <article class="upcoming-card">
+        <h3>Life Skills Course Barcelona</h3>
+
+        <p class="upcoming-date">
+          Starting: Saturday 14th November
+        </p>
+
+        <p>
+         Dates:</p>
+<p>
+14 Nov 10:00 </p>
+<p>
+21 Nov 10:00 </p>
+<p>
+28 Nov 10:00 </p>
+<p>
+5 Dec 10:00 </p>
+<p>
+12 Dec 10:00 
+        </p>
+
+        <p><strong>Location:</strong> Parc del Poblenou, Sant Martí, 08005 Barcelona, Spain</p>
+        <p><strong>Price:</strong> 120EUR</p>
+
+        <a href="https://www.greendogtraining.net/eventinformation-och-anm-lan/life-skill-course-barcelona-parc-del-poblenou/form" class="upcoming-button">
+          Book Now
+        </a>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
 
   </div>
 </section>
