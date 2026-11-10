@@ -1,1 +1,451 @@
+---
+layout: default
+title: Life Skills Course
+description: A five-week Life Skills Course for dogs aged 6 months and over. Build practical skills, confidence and connection for everyday life.
+---
 
+<style>
+.course-banner {
+  width: 100%;
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.course-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section {
+  padding: 75px 5%;
+}
+
+.section-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.section-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--forest);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.intro {
+  background: var(--white);
+}
+
+.intro-text {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.fit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.fit-card {
+  padding: 30px;
+  background: var(--light-green);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.fit-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--forest);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.learn-section {
+  background: var(--white);
+}
+
+.learn-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 25px;
+  list-style: none;
+  padding: 0;
+}
+
+.learn-list li {
+  position: relative;
+  padding: 16px 18px 16px 48px;
+  border: 1px solid #e2e8e1;
+  border-radius: 10px;
+  background: var(--cream);
+}
+
+.learn-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 18px;
+  top: 14px;
+  color: var(--green);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.who-section {
+  background: var(--light-green);
+}
+
+.who-box {
+  max-width: 850px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 35px;
+  text-align: center;
+}
+
+.who-box h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--forest);
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+}
+
+.who-box p {
+  margin-bottom: 14px;
+}
+
+.note {
+  font-size: .95rem;
+  color: #596159;
+  font-style: italic;
+}
+
+.course-details {
+  background: var(--forest);
+  color: var(--white);
+}
+
+.details-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.course-details h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.detail {
+  padding: 22px;
+  background: rgba(255,255,255,.1);
+  border-radius: 12px;
+}
+
+.detail strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.cta {
+  text-align: center;
+  background: var(--tan);
+  color: var(--white);
+}
+
+.cta h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 12px;
+}
+
+.cta p {
+  max-width: 650px;
+  margin: 0 auto 28px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--white);
+  color: var(--forest);
+  padding: 13px 27px;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.button:hover {
+  background: var(--light-green);
+}
+
+@media (max-width: 850px) {
+  .fit-grid,
+  .learn-list,
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-banner img {
+    min-height: 240px;
+    object-fit: cover;
+  }
+}
+  
+.upcoming-section {
+  background: var(--white);
+}
+
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.upcoming-card {
+  background: var(--cream);
+  border-radius: 15px;
+  padding: 28px;
+  text-align: center;
+  border: 1px solid #e2e8e1;
+}
+
+.upcoming-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--forest);
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.upcoming-card p {
+  line-height: 1.6;
+}
+
+.upcoming-date {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.upcoming-button {
+  display: inline-block;
+  background: var(--forest);
+  color: var(--white);
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.upcoming-button:hover {
+  background: var(--green);
+}
+
+
+@media (max-width: 550px) {
+  .section {
+    padding: 55px 5%;
+  }
+
+  .course-banner img {
+    min-height: 190px;
+  }
+
+  .who-box {
+    padding: 28px 22px;
+  }
+}
+</style>
+
+<section class="course-banner">
+  <img
+    src="{{ '/life-skills-course-banner.png' | relative_url }}"
+    alt="Life Skills Course — Real skills for a happier, more confident life together."
+  >
+</section>
+
+<section class="section intro">
+  <div class="section-inner">
+
+    <div class="section-heading">
+      <h2>Upcoming Courses</h2>
+
+      <p>
+   Explore and book a place on our upcoming courses. 
+      </p>
+    </div>
+
+  
+
+  </div>
+</section>
+
+
+
+<section class="section upcoming-section">
+  <div class="section-inner">
+
+
+
+    <div class="upcoming-grid">
+
+      <!-- COURSE 1 -->
+      <article class="upcoming-card">
+        <h3>Life Skills Course Barcelona</h3>
+
+        <p class="upcoming-date">
+            Starting: Saturday 14th November 2026
+        </p>
+
+        <p>
+          Five weeks of practical training, confidence building
+          and fun for dogs aged 6 months and over.
+            <p>
+         Dates:</p>
+<p>
+14 Nov 10:00 </p>
+<p>
+21 Nov 10:00 </p>
+<p>
+28 Nov 10:00 </p>
+<p>
+5 Dec 10:00 </p>
+<p>
+12 Dec 10:00 
+        </p>
+        </p>
+
+        <p><strong>Location:</strong> Parc del Poblenou, Sant Martí, 08005 Barcelona, Spain</p>
+        <p><strong>Price:</strong> 120EUR</p>
+
+        <a href="https://www.greendogtraining.net/eventinformation-och-anm-lan/life-skill-course-barcelona-parc-del-poblenou/form" class="upcoming-button">
+          Book Now
+        </a>
+      </article>
+<article class="upcoming-card">
+        <h3>Puppy Course Castelldefels</h3>
+
+        <p class="upcoming-date">
+          Starting: Thursday 19th November 2026
+        </p>
+
+        <p>
+          The essential starting course for puppies, including the basic foundations for life and socialisation!
+        </p>
+  <p>Dates:</p>
+
+  <p>19 Nov 15:30 </p>
+
+  <p>26 Nov 15:30 </p>
+
+  <p>3 Dec 15:30 </p>
+
+  <p>10 Dec 15:30 </p>
+
+  <p>17 Dec 15:30  </p>
+        <p><strong>Location:</strong> Castelldefels</p>
+        <p><strong>Price:</strong> 120EUR</p>
+
+        <a href="https://www.greendogtraining.net/eventinformation-och-anm-lan/puppy-course-2-5-5m-castelldefels-1/form" class="upcoming-button">
+          Book Now
+        </a>
+      </article>
+
+      <!-- COURSE 2 -->
+      <article class="upcoming-card">
+        <h3>Puppy Course Sitges</h3>
+
+        <p class="upcoming-date">
+          Starting: Friday 20th November
+        </p>
+
+     <p>
+          The essential starting course for puppies, including the basic foundations for life and socialisation!
+        </p>
+  <p>Dates:</p>
+
+  <p>20 Nov 20:00 </p>
+
+  <p>27 Nov 20:00 </p>
+
+  <p>4 Dec 20:00 </p>
+
+  <p>11 Dec 20:00 </p>
+
+  <p>18 Dec 20:00  </p>
+
+        <p><strong>Location:</strong> Sitges, Carrer Ramon de Dalmases, 50, 08870 Sitges, Barcelona, Spain</p>
+        <p><strong>Price:</strong> 120EUR</p>
+
+        <a href="https://www.greendogtraining.net/eventinformation-och-anm-lan/puppy-course-2-5-5m-sitges-4/form" class="upcoming-button">
+          Book Now
+        </a>
+      </article>
+      <!-- COURSE 2 -->
+      <article class="upcoming-card">
+        <h3>Life Skills Course Barcelona</h3>
+
+        <p class="upcoming-date">
+          Starting: Saturday 9th January 2027
+        </p>
+        <p>
+          Five weeks of practical training, confidence building
+          and fun for dogs aged 6 months and over.
+
+        <p>
+         Dates:</p>
+<p>
+9 Jan 10:00 </p>
+<p>
+16 Jan 10:00 </p>
+<p>
+23 Jan 10:00 </p>
+<p>
+30 Jan 10:00 </p>
+<p>
+6 Feb 10:00 
+        </p>
+
+        <p><strong>Location:</strong> Parc del Poblenou, Sant Martí, 08005 Barcelona, Spain</p>
+        <p><strong>Price:</strong> 120EUR</p>
+
+        <a href="https://www.greendogtraining.net/eventinformation-och-anm-lan/life-skill-course-barcelona-parc-del-poblenou/form" class="upcoming-button">
+          Book Now
+        </a>
+      </article>
+    
+
+    </div>
+
+  </div>
+</section>
+
+
+
+  </div>
+</section>
